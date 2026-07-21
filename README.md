@@ -32,7 +32,7 @@ The entire setup process is fully unattended and optimized for both workstation 
 | **Kernels** tested       | 5.15.0-171 (22.04.5) • 6.17.0-1028-oem (24.04.4) • 7.0.0-15 (26.04)                      |
 | **GPUs**          | AMD **CDNA1** • **CDNA2** • **CDNA3** • **CDNA4** • **RDNA3** • **RDNA4**              |
 | **APUs**        | AMD **Strix** • **Strix Halo**                                       |
-| **TheRock**          | 7.14                                                |
+| **TheRock/ROCm**          | 7.14                                                |
 | **PyTorch**       | torch 2.12.0+rocm7.14.0, torchvision 0.27.0+rocm7.14.0, torchaudio 2.11.0+rocm7.14.0       |       |
 
 **⚠️ Note**: **Ubuntu 20.04.x (Focal Fossa)** is **not supported**. The last compatible ROCm version for 20.04 is **6.4.0**.

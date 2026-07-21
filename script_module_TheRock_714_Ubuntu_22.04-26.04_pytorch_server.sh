@@ -298,12 +298,14 @@ install_resolute() {
         print '\nROCm/TheRock detected. Removing ROCm/TheRock and associated packages ...\n'
 
         sudo apt autoremove -y amdrocm7.13
+        sudo apt autoremove -y amdrocm7.14
         sudo apt autoremove -y rocm-core
         sudo apt autoremove -y amdgpu-dkms
         sudo rm /etc/apt/sources.list.d/rocm.list
         sudo apt autoremove -y rocm-bandwidth-test
         sudo rm -rf /var/cache/apt/*
         sudo apt clean all
+        sudo apt update
 
         print '\n ✅ ROCm/TheRock packages removed successfully.'
     else
@@ -330,8 +332,8 @@ install_resolute() {
     # Install prerequisites
     sudo DEBIAN_FRONTEND=noninteractive apt update
     sudo DEBIAN_FRONTEND=noninteractive apt install -y \
-        linux-generic \
-        linux-headers-generic \
+        "linux-headers-$(uname -r)" \
+        "linux-modules-extra-$(uname -r)" \
         python3-pip \
         git \
         git-lfs \
@@ -342,7 +344,10 @@ install_resolute() {
         libmsgpack-dev \
         libstdc++-13-dev \
         libatomic1 \
-        libquadmath0
+        libquadmath0 \
+        libnuma1 \
+        libnuma-dev \
+        numactl
 
     # Download and install the AMD ROCm GPG key
     sudo mkdir --parents --mode=0755 /etc/apt/keyrings
@@ -352,7 +357,6 @@ install_resolute() {
     sudo tee /etc/apt/sources.list.d/rocm.list << EOF
     deb [arch=amd64 signed-by=/etc/apt/keyrings/amdrocm.gpg] https://repo.amd.com/rocm/packages-multi-arch/ubuntu2604 stable main
 EOF
-
     sudo apt update
 
     # Installing complete Core SDK including runtimes, compilers, development tools, and dependencies

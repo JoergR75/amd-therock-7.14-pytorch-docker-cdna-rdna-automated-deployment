@@ -137,7 +137,8 @@ Expected Output Example:
 
 | Ubuntu 26.04 LTS | Ubuntu 24.04.4 LTS |
 |--------|--------|
-| ![](https://github.com/user-attachments/assets/18fef48c-b4aa-47ff-a6ba-48102c1eb589) | ![](https://github.com/user-attachments/assets/c237b408-3ab1-4d37-9ee1-2f8ab24a82c4) |
+| ![](https://github.com/user-attachments/assets/18fef48c-b4aa-47ff-a6ba-48102c1eb589) | ![](<img width="1027" height="1278" alt="image" src="https://github.com/user-attachments/assets/4a937246-22f3-4c05-b465-09e47fa4968c" />
+) |
 
 ⚠️ **Caution:**  
 Make sure **"Re-Size BAR"** is enabled in the **SBIOS**.  

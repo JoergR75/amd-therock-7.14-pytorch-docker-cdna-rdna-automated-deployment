@@ -1,0 +1,272 @@
+# 🚀 Automated AMD AI Stack: TheRock 7.14, PyTorch Stable, Transformers & Docker
+
+[![ROCm](https://img.shields.io/badge/TheRock-7.14-ff6b6b?logo=amd)](https://rocm.docs.amd.com/en/7.14.0/about/release-notes.html)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.11%20%28Stable%29-ee4c2c?logo=pytorch)](https://pytorch.org/get-started/locally/)
+[![Docker](https://img.shields.io/badge/Docker-29.5.x-blue?logo=docker)](https://www.docker.com/)
+[![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04%20%7C%2024.04%20%7C%2026.04-e95420?logo=ubuntu)](https://ubuntu.com/download/server)
+[![AMD Radeon AI PRO R9700](https://img.shields.io/badge/AMD-RDNA4%20Radeon(TM)%20AI%20PRO%20R9700-8B0000?logo=amd)](https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html)
+[![AMD Ryzen AI](https://img.shields.io/badge/AMD-Ryzen%20AI%20-8B0000?logo=amd)](https://ryzen-ai.com/en/)
+[![AMD CDNA MI300 Series](https://img.shields.io/badge/AMD-CDNA%20Instint(TM)%20Architecture-8B0000?logo=amd)](https://www.amd.com/en/technologies/cdna.html)
+
+## 📌 Overview
+
+This repository provides a fully automated, non-interactive deployment environment for AMD GPU software development targeting AI and HPC workloads on Ubuntu **22.04**, **24.04**, and **26.04**. The setup is centered on AMD **TheRock 7.13** Preview and the latest stable PyTorch release.
+
+At the platform layer, the script installs the AMD GPU kernel driver (`amdgpu-dkms`) together with the TheRock 7.13 Preview runtime, including HIP support. The environment is designed to support a broad range of AMD accelerators and graphics architectures, including CDNA1, CDNA2, CDNA3, CDNA4, RDNA3, RDNA4 GPUs, and Strix APUs. The deployment also configures the required system permissions (`video`, `render`, `sudo`) and installs kernel headers necessary for compiling GPU-accelerated native extensions.
+
+For the AI framework layer, the script installs PyTorch 2.11 Stable using TheRock 7.13 wheels from the official PyTorch ROCm nightly repository. This enables access to the latest HIP runtime capabilities, compiler optimizations, and kernel fusion features. The environment is complemented with widely used AI and data-processing libraries, including Transformers, Accelerate, Diffusers, Datasets, and SentencePiece, together with the required Python build tooling for immediate development, testing, benchmarking, and profiling of modern LLM, diffusion, and distributed workloads.
+
+The developer toolchain further includes essential C/C++ build utilities and low-level GPU development packages such as `cmake`, `libstdc++` development headers, `git`, `git-lfs`, `libmsgpack`, and `rocm-bandwidth-test` for PCIe and HBM bandwidth validation. Runtime observability and diagnostics are supported through utilities including `htop`, `ncdu`, `rocminfo` and `amd-smi`.
+
+To validate the installation, the deployment automatically generates a verification script that performs end-to-end GPU checks, including ROCm runtime detection, PyTorch HIP availability, GPU enumeration, and successful on-device tensor execution.
+
+The entire setup process is fully unattended and optimized for both workstation and server deployments. Before installation, the script detects existing ROCm or pip-installed PyTorch environments and removes conflicting packages — including ROCm-specific PyTorch builds — to ensure a clean, reproducible deployment state.
+
+---
+
+## 🖥️ Supported Platforms
+
+| **Component**      | **Supported Versions**                                |
+|---------------------|------------------------------------------------------|
+| **OS**            | Ubuntu 22.04.x (Jammy Jellyfish), Ubuntu 24.04.x (Noble Numbat), Ubuntu 26.04 (Resolute Raccoon) |
+| **Kernels** tested       | 5.15.0-171 (22.04.5) • 6.14.0-1018-oem (24.04.4) • 7.0.0-15 (26.04)                      |
+| **GPUs**          | AMD **CDNA1** • **CDNA2** • **CDNA3** • **CDNA4** • **RDNA3** • **RDNA4**              |
+| **APUs**        | AMD **Strix** • **Strix Halo**                                       |
+| **TheRock**          | 7.13 preview                                                |
+| **PyTorch**       | torch 2.11.0+rocm7.13.0, torchvision 0.26.0+rocm7.13.0       |       |
+
+**⚠️ Note**: **Ubuntu 20.04.x (Focal Fossa)** is **not supported**. The last compatible ROCm version for 20.04 is **6.4.0**.
+
+---
+
+## ⚡ Features
+- Automated **TheRock GPU drivers + HIP SDK** installation
+- **PyTorch Stable** with GPU acceleration
+- Preinstalled **Transformers**, **Accelerate**, **Diffusers**, and **Datasets**
+- Integrated **Docker environment** with ROCm GPU passthrough
+- **vLLM Docker images** for **RDNA4** & **CDNA**
+- Optimized for **AI workloads**, **LLM inference**, and **model fine-tuning**
+
+---
+
+## 🚀 Installation
+
+### 1️⃣ **System preperation**
+Install **Ubuntu 22.04.5 LTS**, **Ubuntu 24.04.4 LTS** or **Ubuntu 26.04 LTS** (Server or Desktop version).
+
+**⚠️ Note**: This Guide uses Ubuntu **26.04 LTS**
+
+**Recommendations:**
+- Use a fresh Ubuntu installation if possible
+- Assign the full storage capacity during installation
+- Install **OpenSSH** for remote SSH management
+- The script automatically checks the system for installed versions of ROCm/TheRock, PyTorch, and Docker, and removes them if found
+  - On a fresh Ubuntu installation, the script automatically skips the deinstallation routine, as illustrated below
+    <img width="1410" height="338" alt="image" src="https://github.com/user-attachments/assets/e592df0f-18bc-4675-953f-3684d0f0d248" />
+  - If an existing version is detected, it will be deleted, regardless of whether it is the same or an older release.
+    <img width="1739" height="607" alt="image" src="https://github.com/user-attachments/assets/7d618bd5-c910-4118-b1b4-a332af4ee152" />
+
+- SBIOS settings:
+  - When using Linux, you should disable Secure Boot
+  - On WRX80 and WRX90 motherboard solutions, make sure SR-IOV is enabled — there are known issues with Ubuntu Linux detecting the network otherwise
+
+- Ubuntu 22.04.5:
+  
+  During installation, it may be required to add `nomodeset` to the GRUB boot parameters to prevent boot hangs.
+
+  In the GRUB menu (for example, at **"Try or Install Ubuntu Server"**):
+  - Highlight the installation entry
+  - Press **`e`** to edit the boot parameters
+  - Locate the line beginning with:
+
+     ```bash
+     linux /casper/vmlinuz
+     ```
+
+  - Add `quiet splash nomodeset` before the final `---`:
+
+     ```bash
+     linux /casper/vmlinuz quiet splash nomodeset ---
+     ```
+
+  - Press **Ctrl + X** or **F10** to boot with the updated parameters
+
+### 2️⃣ **Download the Script from the Repository**
+```bash
+wget https://raw.githubusercontent.com/JoergR75/-therock-7.13-pytorch-docker-cdna-rdna-automated-deployment-preview/refs/heads/main/script_module_TheRock_713_Ubuntu_22.04-26.04_pytorch_server.sh
+```
+
+<img width="2351" height="471" alt="image" src="https://github.com/user-attachments/assets/153f3411-79c9-4aa3-b07b-be32781a8e92" />
+
+### 3️⃣ **Run the Installer**
+```bash
+bash script_module_TheRock_713_Ubuntu_22.04-26.04_pytorch_server.sh
+```
+**⚠️ Note**: Entering the user password may be required.
+
+<img width="1643" height="606" alt="image" src="https://github.com/user-attachments/assets/828082e9-b8e6-455f-b8ac-0d1ceb2574c5" />
+
+The installation takes ~15 minutes depending on internet speed and hardware performance.
+
+### 4️⃣ **Reboot the System**
+After the successful installation, press "y" to reboot the system and activate all installed components.
+
+<img width="2203" height="570" alt="image" src="https://github.com/user-attachments/assets/02d06fda-7385-4370-9961-6957d1e1bdf6" />
+
+## 🧪 Testing ROCm + PyTorch
+
+After rebooting, verify your setup:
+
+This script creates a simple diagnostic python file (test.py) to verify that PyTorch with ROCm support is correctly installed and working.
+
+What it does:
+
+- Shows the CPU and installed memory
+- Prints the TheRock, PyTorch and Transformers version.
+- Checks if TheRock is available and how many GPUs are detected.
+- Displays the name of the first GPU (if available).
+- Creates two random 3×3 tensors directly on the GPU (if available).
+- Performs a simple tensor addition operation on the GPU.
+- Prints confirmation that the operation was successful and shows the result.
+
+Example usage:
+```bash
+python3 test.py
+```
+Expected Output Example:
+
+| Ubuntu 26.04 LTS | Ubuntu 24.04.4 LTS |
+|--------|--------|
+| ![](https://github.com/user-attachments/assets/18fef48c-b4aa-47ff-a6ba-48102c1eb589) | ![](https://github.com/user-attachments/assets/c237b408-3ab1-4d37-9ee1-2f8ab24a82c4) |
+
+⚠️ **Caution:**  
+Make sure **"Re-Size BAR"** is enabled in the **SBIOS**.  
+If it is disabled, **P2P** will be deactivated.
+
+### ⚙️ How to Enable **Re-Size BAR** in SBIOS (example ASRock WRX90 evo)
+
+1. Enter **SBIOS**
+
+<img width="1007" height="760" alt="{F9649127-0F1F-4E14-8008-1F3782FBBDEF}" src="https://github.com/user-attachments/assets/9685c1a4-ecab-4fea-8e91-dd21b9869c7e" />
+
+3. Navigate to **Advanced**
+
+<img width="1018" height="761" alt="{135D3B4C-0732-4652-A3C0-1224D275A515}" src="https://github.com/user-attachments/assets/b1cdc3ce-b526-4cdc-b44f-71d1119cf6d7" />
+
+5. Go to **PCI Subsystem Settings** and change **Re-Size BAR Support** to **Enable** 
+
+<img width="1016" height="761" alt="{3C54C3DA-8B82-483C-AEA5-D0A511508780}" src="https://github.com/user-attachments/assets/60536e2b-e59f-4486-a1fc-ab3ff33a3cd8" />
+
+## 🐋 Docker Integration
+
+The script sets up a Docker environment with GPU passthrough support via ROCm.
+
+Check Docker installation and version
+```bash
+docker -v
+```
+
+<img width="1307" height="97" alt="image" src="https://github.com/user-attachments/assets/f76d6006-866f-4d18-ab65-8c549751e8e3" />
+
+### 🤖 vLLM Docker Images
+
+To use vLLM optimized for RDNA4 and CDNA:
+
+Use the container image you need.
+
+**RDNA4** architecture running on Ubuntu 22.04
+```bash
+docker pull vllm/vllm-openai-rocm:v0.22.0
+```
+
+<img width="2036" height="812" alt="image" src="https://github.com/user-attachments/assets/f7cd20ad-5730-4616-9eb4-44e87e068720" />
+
+Further vLLM Docker versions for RDNA4 can be verified on Docker Hub:  
+https://hub.docker.com/r/rocm/vllm-dev/tags?name=navi or https://hub.docker.com/r/vllm/vllm-openai-rocm/tags
+
+or for **CDNA** architecture
+```bash
+sudo docker pull rocm/vllm:latest
+```
+
+Run vLLM with all available AMD GPU access (example for RDNA4 on Ubuntu 24.04)
+```bash
+sudo docker run -it \
+    --device=/dev/kfd \
+    --device=/dev/dri \
+    --security-opt seccomp=unconfined \
+    --group-add video \
+    --entrypoint /bin/bash \
+    rocm/vllm:rocm7.13.0_gfx120X-all_ubuntu24.04_py3.13_pytorch_2.10.0_vllm_0.19.1
+```
+
+<img width="1851" height="290" alt="image" src="https://github.com/user-attachments/assets/8a16798d-8ffb-4420-bc2a-135b27428b50" />
+
+With `amd-smi`, you can verify all available GPUs (in this case, 2× Radeon AI PRO R9700 GPUs).
+
+<img width="1651" height="751" alt="image" src="https://github.com/user-attachments/assets/ffe16b16-07ab-425b-97ba-11f7269080d2" />
+
+If you need to add a specific GPU, you can use the **passthrough** option.  
+First, verify the available GPUs in the `/dev/dri` directory (host).
+```bash
+cd /dev/dri && ls
+```
+
+<img width="1368" height="95" alt="image" src="https://github.com/user-attachments/assets/f219bd3f-5626-4935-a4fd-5f08774a4e76" />
+
+Let's choose **GPU2**, also referred to as **"card2"** or **"renderD129"**.
+```bash
+sudo docker run -it \
+    --device=/dev/kfd \
+    --device=/dev/dri/card2 \
+    --device=/dev/dri/renderD129 \
+    --security-opt seccomp=unconfined \
+    --group-add video \
+    --entrypoint /bin/bash \
+    rocm/vllm:rocm7.13.0_gfx120X-all_ubuntu24.04_py3.13_pytorch_2.10.0_vllm_0.19.1
+```
+GPU2 has been added to the container
+
+<img width="1805" height="907" alt="image" src="https://github.com/user-attachments/assets/a0ee53ab-123a-4db2-8bdf-e931bdc65d34" />
+
+## How to Save a Modified Docker Container
+
+1️⃣ Open your container and modify it as needed (e.g., install packages, change configurations).
+
+**⚠️ Note: Do not stop or close the container!**
+
+2️⃣ Open another terminal (CLI) window.
+
+3️⃣ Verify the running and stopped containers:
+```bash
+sudo docker ps -a
+```
+
+<img width="844" height="126" alt="image" src="https://github.com/user-attachments/assets/b879c0a2-a071-4307-adba-0da66534fd15" />
+
+4️⃣ In this example, we want to save the running container `loving_wescoff` as a new image named `rocm/vllm-dev:rocm7.2.1_navi_ubuntu24.04_py3.12_pytorch_2.9_vllm_0.16.0_2`:
+```bash
+docker commit loving_wescoff vllm/vllm-openai-rocm:v0.20.1_2
+```
+
+<img width="842" height="46" alt="image" src="https://github.com/user-attachments/assets/968c0c38-20c9-4cac-8928-c4a7797e15a7" />
+
+5️⃣ Verify that the new image was created successfully:
+```bash
+sudo docker images
+```
+
+<img width="855" height="138" alt="image" src="https://github.com/user-attachments/assets/86a03be1-e4e2-4e88-8a28-6d362fb14d7b" />
+
+6️⃣ Start the new container with one GPU (renderD129):
+```bash
+sudo docker run -it \
+    --device=/dev/kfd \
+    --device=/dev/dri/card2 \
+    --device=/dev/dri/renderD129 \
+    --security-opt seccomp=unconfined \
+    --group-add video \
+    vllm/vllm-openai-rocm:v0.20.1_2
+```
+
+<img width="828" height="395" alt="image" src="https://github.com/user-attachments/assets/e7349f84-b08b-4500-988d-19aff77025be" />

@@ -209,13 +209,42 @@ install_noble() {
     read -n1 -r -p "Press any key to continue..." key
 
     # Update to OEM kernel 6.17.x
-    if [[ "$current_kernel" != *-oem ]]; then
+    update_oem_kernel() {
+        local current_kernel
+        local required_kernel="6.17"
+
+        current_kernel=$(uname -r)
+
+        if [[ "$current_kernel" == ${required_kernel}.*-oem ]]; then
+            info "Required OEM kernel already active: $current_kernel"
+            return 0
+        fi
+
+        info "Current kernel: $current_kernel"
+        info "Installing OEM kernel ${required_kernel}..."
         sudo apt update
-        sudo apt install -y linux-oem-24.04c
-        info "Reboot required to activate the OEM kernel."
-    else
-        info "OEM kernel already active: $current_kernel"
-    fi
+
+        # Check if OEM kernel packages are available
+        if apt-cache show linux-image-6.17.0-1028-oem >/dev/null 2>&1; then
+
+            if sudo apt install -y \
+                linux-image-6.17.0-1028-oem \
+                linux-modules-6.17.0-1028-oem \
+                linux-headers-6.17.0-1028-oem; then
+
+                info "OEM kernel ${required_kernel} installed successfully."
+                info "Reboot required to activate the new kernel."
+            else
+                error "OEM kernel installation failed."
+                return 1
+            fi
+
+        else
+            error "Required OEM kernel 6.17.0-1028-oem is not available in configured repositories."
+            error "Keeping current kernel: $current_kernel"
+            return 1
+        fi
+    }
 
     # add the user to the sudo group (iportant e.g. to compile vllm, flashattention in a pip environment)
     sudo usermod -a -G video,render ${SUDO_USER:-$USER}

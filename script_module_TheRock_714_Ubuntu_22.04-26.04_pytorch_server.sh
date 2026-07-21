@@ -332,22 +332,27 @@ install_resolute() {
     # Install prerequisites
     sudo DEBIAN_FRONTEND=noninteractive apt update
     sudo DEBIAN_FRONTEND=noninteractive apt install -y \
-        "linux-headers-$(uname -r)" \
-        "linux-modules-extra-$(uname -r)" \
+        linux-generic \
         python3-pip \
+        python3-venv \
+        python3-dev \
         git \
         git-lfs \
         htop \
-        freeipmi-tools \
         ncdu \
         cmake \
+        pkg-config \
+        pciutils \
+        hwloc \
+        freeipmi-tools \
         libmsgpack-dev \
-        libstdc++-13-dev \
+        libstdc++-16-dev \
         libatomic1 \
         libquadmath0 \
         libnuma1 \
         libnuma-dev \
-        numactl
+        numactl \
+        libssl-dev
 
     # Download and install the AMD ROCm GPG key
     sudo mkdir --parents --mode=0755 /etc/apt/keyrings

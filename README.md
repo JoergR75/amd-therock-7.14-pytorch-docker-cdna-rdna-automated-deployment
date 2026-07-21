@@ -10,11 +10,11 @@
 
 ## 📌 Overview
 
-This repository provides a fully automated, non-interactive deployment environment for AMD GPU software development targeting AI and HPC workloads on Ubuntu **22.04**, **24.04**, and **26.04**. The setup is centered on AMD **TheRock 7.13** Preview and the latest stable PyTorch release.
+This repository provides a fully automated, non-interactive deployment environment for AMD GPU software development targeting AI and HPC workloads on Ubuntu **22.04**, **24.04**, and **26.04**. The setup is centered on AMD **TheRock 7.14** Preview and the latest stable PyTorch release.
 
-At the platform layer, the script installs the AMD GPU kernel driver (`amdgpu-dkms`) together with the TheRock 7.13 Preview runtime, including HIP support. The environment is designed to support a broad range of AMD accelerators and graphics architectures, including CDNA1, CDNA2, CDNA3, CDNA4, RDNA3, RDNA4 GPUs, and Strix APUs. The deployment also configures the required system permissions (`video`, `render`, `sudo`) and installs kernel headers necessary for compiling GPU-accelerated native extensions.
+At the platform layer, the script installs the AMD GPU kernel driver (`amdgpu-dkms`) together with the TheRock 7.14 Preview runtime, including HIP support. The environment is designed to support a broad range of AMD accelerators and graphics architectures, including CDNA1, CDNA2, CDNA3, CDNA4, RDNA3, RDNA4 GPUs, and Strix APUs. The deployment also configures the required system permissions (`video`, `render`, `sudo`) and installs kernel headers necessary for compiling GPU-accelerated native extensions.
 
-For the AI framework layer, the script installs PyTorch 2.11 Stable using TheRock 7.13 wheels from the official PyTorch ROCm nightly repository. This enables access to the latest HIP runtime capabilities, compiler optimizations, and kernel fusion features. The environment is complemented with widely used AI and data-processing libraries, including Transformers, Accelerate, Diffusers, Datasets, and SentencePiece, together with the required Python build tooling for immediate development, testing, benchmarking, and profiling of modern LLM, diffusion, and distributed workloads.
+For the AI framework layer, the script installs PyTorch 2.12 Stable using TheRock 7.14 wheels from the official PyTorch ROCm nightly repository. This enables access to the latest HIP runtime capabilities, compiler optimizations, and kernel fusion features. The environment is complemented with widely used AI and data-processing libraries, including Transformers, Accelerate, Diffusers, Datasets, and SentencePiece, together with the required Python build tooling for immediate development, testing, benchmarking, and profiling of modern LLM, diffusion, and distributed workloads.
 
 The developer toolchain further includes essential C/C++ build utilities and low-level GPU development packages such as `cmake`, `libstdc++` development headers, `git`, `git-lfs`, `libmsgpack`, and `rocm-bandwidth-test` for PCIe and HBM bandwidth validation. Runtime observability and diagnostics are supported through utilities including `htop`, `ncdu`, `rocminfo` and `amd-smi`.
 
@@ -29,11 +29,11 @@ The entire setup process is fully unattended and optimized for both workstation 
 | **Component**      | **Supported Versions**                                |
 |---------------------|------------------------------------------------------|
 | **OS**            | Ubuntu 22.04.x (Jammy Jellyfish), Ubuntu 24.04.x (Noble Numbat), Ubuntu 26.04 (Resolute Raccoon) |
-| **Kernels** tested       | 5.15.0-171 (22.04.5) • 6.14.0-1018-oem (24.04.4) • 7.0.0-15 (26.04)                      |
+| **Kernels** tested       | 5.15.0-171 (22.04.5) • 6.17.0-1028-oem (24.04.4) • 7.0.0-15 (26.04)                      |
 | **GPUs**          | AMD **CDNA1** • **CDNA2** • **CDNA3** • **CDNA4** • **RDNA3** • **RDNA4**              |
 | **APUs**        | AMD **Strix** • **Strix Halo**                                       |
-| **TheRock**          | 7.13 preview                                                |
-| **PyTorch**       | torch 2.11.0+rocm7.13.0, torchvision 0.26.0+rocm7.13.0       |       |
+| **TheRock**          | 7.14                                                |
+| **PyTorch**       | torch 2.12.0+rocm7.14.0, torchvision 0.26.0+rocm7.13.0       |       |
 
 **⚠️ Note**: **Ubuntu 20.04.x (Focal Fossa)** is **not supported**. The last compatible ROCm version for 20.04 is **6.4.0**.
 

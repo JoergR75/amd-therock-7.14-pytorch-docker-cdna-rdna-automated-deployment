@@ -209,26 +209,11 @@ install_noble() {
     read -n1 -r -p "Press any key to continue..." key
 
     # Update to OEM kernel 6.17.x
-    install_oem_kernel() {
-        local current_kernel
-        current_kernel=$(uname -r)
+    sudo apt install -y \
+        linux-image-6.17.0-1028-oem \
+        linux-modules-6.17.0-1028-oem \
+        linux-headers-6.17.0-1028-oem
 
-        if [[ "$current_kernel" == 6.17.*-oem ]]; then
-            info "OEM kernel already active: $current_kernel"
-            return 0
-        fi
-
-        info "Current kernel: $current_kernel"
-        info "Installing 6.17 OEM kernel..."
-
-        sudo apt install -y \
-            linux-image-6.17.0-1028-oem \
-            linux-modules-6.17.0-1028-oem \
-            linux-headers-6.17.0-1028-oem
-
-        info "Reboot required."
-    }
-    
     # add the user to the sudo group (iportant e.g. to compile vllm, flashattention in a pip environment)
     sudo usermod -a -G video,render ${SUDO_USER:-$USER}
     sudo usermod -aG sudo ${SUDO_USER:-$USER}

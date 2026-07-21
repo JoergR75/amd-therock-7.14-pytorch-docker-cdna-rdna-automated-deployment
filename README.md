@@ -125,7 +125,7 @@ What it does:
 - Prints the TheRock, PyTorch and Transformers version.
 - Checks if TheRock is available and how many GPUs are detected.
 - Displays the name of the first GPU (if available).
-- Creates two random 3×3 tensors directly on the GPU (if available).
+- Creates two random 3x3 tensors directly on the GPU (if available).
 - Performs a simple tensor addition operation on the GPU.
 - Prints confirmation that the operation was successful and shows the result.
 

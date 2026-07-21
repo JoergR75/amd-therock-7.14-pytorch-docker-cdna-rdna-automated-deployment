@@ -29,7 +29,7 @@ The entire setup process is fully unattended and optimized for both workstation 
 | **Component**      | **Supported Versions**                                |
 |---------------------|------------------------------------------------------|
 | **OS**            | Ubuntu 22.04.x (Jammy Jellyfish), Ubuntu 24.04.x (Noble Numbat), Ubuntu 26.04 (Resolute Raccoon) |
-| **Kernels** tested       | 5.15.0-171 (22.04.5) • 6.17.0-1028-oem (24.04.4) • 7.0.0-15 (26.04)                      |
+| **Kernels** tested       | 5.15.0-171 (22.04.5) • 6.17.0-1028-oem (24.04.4) • 7.0.0-28 (26.04)                      |
 | **GPUs**          | AMD **CDNA1** • **CDNA2** • **CDNA3** • **CDNA4** • **RDNA3** • **RDNA4**              |
 | **APUs**        | AMD **Strix** • **Strix Halo**                                       |
 | **TheRock/ROCm**          | 7.14                                                |

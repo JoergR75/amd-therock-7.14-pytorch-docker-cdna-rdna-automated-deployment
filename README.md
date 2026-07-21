@@ -139,7 +139,7 @@ Expected Output Example:
 |--------|--------|
 | ![](https://github.com/user-attachments/assets/18fef48c-b4aa-47ff-a6ba-48102c1eb589) | ![](https://github.com/user-attachments/assets/4a937246-22f3-4c05-b465-09e47fa4968c) |
 
-With `amd-smi`, you can verify all available GPUs (in this case, 2× Radeon AI PRO R9700 GPUs).
+With `amd-smi`, you can verify all available GPUs (in this case, 2x Radeon AI PRO R9700 GPUs).
 
 <img width="1998" height="754" alt="image" src="https://github.com/user-attachments/assets/06d7ba06-3edf-432b-a8f9-61d412547f85" />
 

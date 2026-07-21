@@ -104,7 +104,7 @@ bash script_module_TheRock_714_Ubuntu_22.04-26.04_pytorch_server.sh
 ```
 **⚠️ Note**: Entering the user password may be required.
 
-<img width="2191" height="909" alt="image" src="https://github.com/user-attachments/assets/ab3f32b5-dcdb-4796-ac15-cf7a46c87fc5" />
+<img width="2095" height="538" alt="image" src="https://github.com/user-attachments/assets/66c9c8a2-1dc4-40c7-bfc7-973edace0961" />
 
 The installation takes ~15 minutes depending on internet speed and hardware performance.
 

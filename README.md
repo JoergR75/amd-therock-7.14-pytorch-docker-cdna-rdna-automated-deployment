@@ -166,7 +166,7 @@ Check Docker installation and version
 docker -v
 ```
 
-<img width="1307" height="97" alt="image" src="https://github.com/user-attachments/assets/f76d6006-866f-4d18-ab65-8c549751e8e3" />
+<img width="2018" height="101" alt="image" src="https://github.com/user-attachments/assets/cca4209b-8543-4787-88c9-bef6b1e94db5" />
 
 ### 🤖 vLLM Docker Images
 
@@ -197,7 +197,7 @@ sudo docker run -it \
     --security-opt seccomp=unconfined \
     --group-add video \
     --entrypoint /bin/bash \
-    rocm/vllm:rocm7.13.0_gfx120X-all_ubuntu24.04_py3.13_pytorch_2.10.0_vllm_0.19.1
+    rocm/vllm:rocm7.14.0_rdna_ubuntu24.04_py3.14_pytorch_2.11.0_vllm_0.23.0
 ```
 
 <img width="1851" height="290" alt="image" src="https://github.com/user-attachments/assets/8a16798d-8ffb-4420-bc2a-135b27428b50" />
@@ -223,7 +223,7 @@ sudo docker run -it \
     --security-opt seccomp=unconfined \
     --group-add video \
     --entrypoint /bin/bash \
-    rocm/vllm:rocm7.13.0_gfx120X-all_ubuntu24.04_py3.13_pytorch_2.10.0_vllm_0.19.1
+    rocm/vllm:rocm7.14.0_rdna_ubuntu24.04_py3.14_pytorch_2.11.0_vllm_0.23.0
 ```
 GPU2 has been added to the container
 

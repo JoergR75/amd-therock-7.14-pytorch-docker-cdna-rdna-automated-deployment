@@ -209,22 +209,13 @@ install_noble() {
     read -n1 -r -p "Press any key to continue..." key
 
     # Update to OEM kernel 6.17.x
-    update_oem_kernel() {
-        local current_kernel
-        current_kernel=$(uname -r)
-
-        if [[ "$current_kernel" != 6.17.*-oem ]]; then
-            info "Current kernel: $current_kernel"
-            info "Installing Ubuntu OEM kernel 6.17..."
-
-            sudo apt update
-            sudo apt install -y linux-oem-24.04c
-
-            info "OEM kernel installed. Please reboot to activate the new kernel."
-        else
-            info "OEM kernel 6.17 is already active: $current_kernel"
-        fi
-    }
+    if [[ "$current_kernel" != *-oem ]]; then
+        sudo apt update
+        sudo apt install -y linux-oem-24.04c
+        info "Reboot required to activate the OEM kernel."
+    else
+        info "OEM kernel already active: $current_kernel"
+    fi
 
     # add the user to the sudo group (iportant e.g. to compile vllm, flashattention in a pip environment)
     sudo usermod -a -G video,render ${SUDO_USER:-$USER}

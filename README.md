@@ -204,11 +204,11 @@ sudo docker run -it \
     rocm/vllm:rocm7.14.0_rdna_ubuntu24.04_py3.14_pytorch_2.11.0_vllm_0.23.0
 ```
 
-<img width="1851" height="290" alt="image" src="https://github.com/user-attachments/assets/8a16798d-8ffb-4420-bc2a-135b27428b50" />
+<img width="2068" height="284" alt="image" src="https://github.com/user-attachments/assets/b84604af-ef10-4b4e-98a2-55c661ff8a99" />
 
 With `amd-smi`, you can verify all available GPUs (in this case, 2× Radeon AI PRO R9700 GPUs).
 
-<img width="1651" height="751" alt="image" src="https://github.com/user-attachments/assets/ffe16b16-07ab-425b-97ba-11f7269080d2" />
+<img width="2143" height="747" alt="image" src="https://github.com/user-attachments/assets/c36e81a2-db8a-41e0-8a63-8d3031ad7d19" />
 
 If you need to add a specific GPU, you can use the **passthrough** option.  
 First, verify the available GPUs in the `/dev/dri` directory (host).

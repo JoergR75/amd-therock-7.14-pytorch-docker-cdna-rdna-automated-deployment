@@ -19,7 +19,7 @@ exec > >(tee -a "$LOGFILE") 2>&1
 #   - Ubuntu 26.04.x LTS (Resolute Raccoon)
 #
 # Kernel Versions Tested:
-#   - Ubuntu 22.04.5: 6.8.0-117
+#   - Ubuntu 22.04.5: 5.15.0-186
 #   - Ubuntu 24.04.4: 6.17.0-1028-oem
 #   - Ubuntu 26.04.x: 7.0.0-28
 #
@@ -109,19 +109,34 @@ install_jammy() {
     sudo usermod -a -G video,render ${SUDO_USER:-$USER}
     sudo usermod -aG sudo ${SUDO_USER:-$USER}
 
-    # Install the necessary headers and static library files
-    sudo DEBIAN_FRONTEND=noninteractive apt-get -y install "linux-headers-$(uname -r)" "linux-modules-extra-$(uname -r)"
-    sudo DEBIAN_FRONTEND=noninteractive apt-get -y install libstdc++-13-dev
-    sudo DEBIAN_FRONTEND=noninteractive apt-get -y install git-lfs
-    sudo DEBIAN_FRONTEND=noninteractive apt-get -y install libatomic1 libquadmath0
+   # Install prerequisites
+    sudo DEBIAN_FRONTEND=noninteractive apt update
+    sudo DEBIAN_FRONTEND=noninteractive apt install -y \
+        linux-generic \
+        python3-pip \
+        python3-venv \
+        python3-dev \
+        git \
+        git-lfs \
+        htop \
+        ncdu \
+        cmake \
+        pkg-config \
+        pciutils \
+        hwloc \
+        freeipmi-tools \
+        libmsgpack-dev \
+        libstdc++-16-dev \
+        libatomic1 \
+        libquadmath0 \
+        libnuma1 \
+        libnuma-dev \
+        numactl \
+        libssl-dev
 
     sudo DEBIAN_FRONTEND=noninteractive apt install -y linux-generic-hwe-22.04
 
     # Download and install the AMD ROCm GPG key
-
-    sudo mkdir --parents --mode=0755 /etc/apt/keyrings
-
-    # ROCm release signing key
     sudo mkdir --parents --mode=0755 /etc/apt/keyrings
     wget https://repo.amd.com/rocm/packages-multi-arch/gpg/rocm.gpg -O - | \
         gpg --dearmor | sudo tee /etc/apt/keyrings/amdrocm.gpg > /dev/null
@@ -129,23 +144,11 @@ install_jammy() {
     sudo tee /etc/apt/sources.list.d/rocm.list << EOF
     deb [arch=amd64 signed-by=/etc/apt/keyrings/amdrocm.gpg] https://repo.amd.com/rocm/packages-multi-arch/ubuntu2204 stable main
 EOF
-
     sudo apt update
 
     print '\n 📦 Installing TheRock 7.14 complete Core SDK including runtimes, compilers, development tools, and dependencies ...\n'
 
     sudo apt install -y amdrocm7.14
-
-    # Install tools - git, htop, cmake, libmsgpack-dev, ncdu (NCurses Disk Usage utility / df -h) and freeipmi-tools (BMC version read)
-
-    source ~/.bashrc
-    sudo DEBIAN_FRONTEND=noninteractive apt install -y \
-        git \
-        htop \
-        freeipmi-tools \
-        ncdu \
-        cmake \
-        libmsgpack-dev
 
     # Add ROCm binaries to PATH
     echo 'export PATH="/opt/rocm/bin:$PATH"' >> ~/.bashrc
@@ -159,17 +162,26 @@ EOF
     # Apply changes immediately in current shell
     source ~/.bashrc
 
-   print '\n 📦 Installing PyTorch 2.12 (Stable) for TheRock 7.14, Transformers environment ...\n'
+    print '\n 📦 Installing PyTorch 2.12 (Stable) for TheRock 7.14, Transformers environment ...\n'
 
-    sudo apt update
-    sudo apt-get install -y python3-pip
-    python3 -m pip install --upgrade pip wheel
+    python3 -m pip install --upgrade \
+        pip \
+        wheel \
+        setuptools
     python3 -m pip install \
         --index-url https://repo.amd.com/rocm/whl-multi-arch/ \
         "torch[device-gfx1201]==2.12.0+rocm7.14.0" \
         "torchvision[device-gfx1201]==0.27.0+rocm7.14.0" \
         "torchaudio==2.11.0+rocm7.14.0"
-    python3 -m pip install --upgrade joblib setuptools_scm transformers accelerate diffusers protobuf sentencepiece datasets
+    python3 -m pip install --upgrade \
+        accelerate \
+        datasets \
+        diffusers \
+        joblib \
+        protobuf \
+        sentencepiece \
+        setuptools_scm \
+        transformers
 }
 
 install_noble() {

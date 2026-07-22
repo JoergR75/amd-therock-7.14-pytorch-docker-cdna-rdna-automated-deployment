@@ -121,13 +121,19 @@ This script creates a simple diagnostic python file (test.py) to verify that PyT
 
 What it does:
 
-- Shows the CPU and installed memory
-- Prints the TheRock, PyTorch, Ubuntu, kernel and Transformers version.
-- Checks if TheRock is available and how many GPUs are detected.
-- Displays the name of the installed GPU(s).
-- Creates two random 3x3 tensors directly on the GPU (if available).
-- Performs a simple tensor addition operation on the GPU.
-- Prints confirmation that the operation was successful and shows the result.
+- ✅ Validates the operating system, kernel version, CPU, and installed system memory.
+- ✅ Verifies the installed AI software stack, including PyTorch, ROCm, and Transformers versions.
+- ✅ Confirms that the ROCm runtime is correctly installed and accessible (torch.cuda.is_available()).
+- ✅ Automatically detects all installed AMD GPUs and reports key hardware information:
+  - GPU model
+  - Available and total VRAM
+  - PCIe device address
+  - PCIe link width
+  - PCIe link speed
+- ✅ Verifies that each GPU is operating at the expected PCIe bandwidth (e.g., PCIe Gen5 x16).
+- ✅ Performs a PyTorch tensor computation on every detected GPU to validate end-to-end GPU functionality.
+- ✅ Confirms successful GPU initialization, memory allocation, and compute execution for each device.
+- ✅ Provides a quick system health check to ensure the workstation is ready for AI inference and training workloads.
 
 Example usage:
 ```bash

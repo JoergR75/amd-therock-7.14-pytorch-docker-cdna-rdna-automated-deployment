@@ -106,8 +106,8 @@ install_jammy() {
     # Pause before continuing
     read -n1 -r -p "Press any key to continue..." key
     
-    # Install the latest HWE kernel available for Ubuntu 22.04 LTS
-    # sudo DEBIAN_FRONTEND=noninteractive apt install -y linux-generic-hwe-22.04
+    # Install the latest OEM kernel available for Ubuntu 22.04 LTS
+    sudo DEBIAN_FRONTEND=noninteractive apt install -y linux-oem-22.04
 
     # add the user to the sudo group (iportant e.g. to compile vllm, flashattention in a pip environment)
     sudo usermod -a -G video,render ${SUDO_USER:-$USER}

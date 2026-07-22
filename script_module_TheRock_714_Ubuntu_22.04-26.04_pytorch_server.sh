@@ -185,7 +185,7 @@ install_noble() {
         sudo apt autoremove -y rocm-core
         sudo apt autoremove -y amdgpu-dkms
         sudo rm /etc/apt/sources.list.d/rocm.list
-        sudo apt autoremove -y rocm-bandwidth-test
+        #sudo apt autoremove -y rocm-bandwidth-test
         sudo rm -rf /var/cache/apt/*
         sudo apt clean all
         sudo apt update
@@ -302,7 +302,7 @@ install_resolute() {
         sudo apt autoremove -y rocm-core
         sudo apt autoremove -y amdgpu-dkms
         sudo rm /etc/apt/sources.list.d/rocm.list
-        sudo apt autoremove -y rocm-bandwidth-test
+        #sudo apt autoremove -y rocm-bandwidth-test
         sudo rm -rf /var/cache/apt/*
         sudo apt clean all
         sudo apt update

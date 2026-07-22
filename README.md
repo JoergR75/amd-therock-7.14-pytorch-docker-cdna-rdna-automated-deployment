@@ -1,4 +1,4 @@
-# 🚀 Automated AMD AI Stack: TheRock 7.14, PyTorch Stable, Transformers & Docker
+# 🚀 Automated AMD AI Stack: TheRock 7.14, PyTorch Stable, Transformers, Docker & vLLM
 
 [![ROCm](https://img.shields.io/badge/TheRock-7.14-ff6b6b?logo=amd)](https://rocm.docs.amd.com/en/docs-7.14.0/about/release-notes.html)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.12%20%28Stable%29-ee4c2c?logo=pytorch)](https://pytorch.org/get-started/locally/)

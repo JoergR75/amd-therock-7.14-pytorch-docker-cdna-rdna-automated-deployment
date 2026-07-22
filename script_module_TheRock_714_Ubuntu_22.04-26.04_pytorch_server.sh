@@ -107,7 +107,7 @@ install_jammy() {
     read -n1 -r -p "Press any key to continue..." key
     
     # Install the latest HWE kernel available for Ubuntu 22.04 LTS
-    sudo DEBIAN_FRONTEND=noninteractive apt install -y linux-generic-hwe-22.04
+    # sudo DEBIAN_FRONTEND=noninteractive apt install -y linux-generic-hwe-22.04
 
     # add the user to the sudo group (iportant e.g. to compile vllm, flashattention in a pip environment)
     sudo usermod -a -G video,render ${SUDO_USER:-$USER}
@@ -116,7 +116,6 @@ install_jammy() {
    # Install prerequisites
     sudo DEBIAN_FRONTEND=noninteractive apt update
     sudo DEBIAN_FRONTEND=noninteractive apt install -y \
-        linux-generic \
         python3-pip \
         python3-venv \
         python3-dev \

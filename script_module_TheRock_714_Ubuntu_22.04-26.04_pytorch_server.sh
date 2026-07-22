@@ -80,6 +80,7 @@ install_jammy() {
         print '\nROCm detected. Removing ROCm/TheRock and associated packages ...\n'
 
         sudo apt autoremove -y amdrocm7.13
+        sudo apt autoremove -y amdrocm7.14
         sudo apt autoremove -yq rocm-core
         sudo apt autoremove -yq amdgpu-dkms
         sudo rm /etc/apt/sources.list.d/rocm.list
@@ -104,6 +105,9 @@ install_jammy() {
 
     # Pause before continuing
     read -n1 -r -p "Press any key to continue..." key
+    
+    # Install the latest HWE kernel available for Ubuntu 22.04 LTS
+    sudo DEBIAN_FRONTEND=noninteractive apt install -y linux-generic-hwe-22.04
 
     # add the user to the sudo group (iportant e.g. to compile vllm, flashattention in a pip environment)
     sudo usermod -a -G video,render ${SUDO_USER:-$USER}
@@ -133,8 +137,6 @@ install_jammy() {
         libnuma-dev \
         numactl \
         libssl-dev
-
-    sudo DEBIAN_FRONTEND=noninteractive apt install -y linux-generic-hwe-22.04
 
     # Download and install the AMD ROCm GPG key
     sudo mkdir --parents --mode=0755 /etc/apt/keyrings

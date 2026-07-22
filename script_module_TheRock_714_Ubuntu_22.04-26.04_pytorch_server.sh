@@ -115,6 +115,7 @@ install_jammy() {
 
    # Install prerequisites
     sudo DEBIAN_FRONTEND=noninteractive apt update
+
     sudo DEBIAN_FRONTEND=noninteractive apt install -y \
         python3-pip \
         python3-venv \
@@ -124,12 +125,13 @@ install_jammy() {
         htop \
         ncdu \
         cmake \
+        ninja-build \
         pkg-config \
         pciutils \
         hwloc \
         freeipmi-tools \
         libmsgpack-dev \
-        libstdc++-16-dev \
+        libstdc++-11-dev \
         libatomic1 \
         libquadmath0 \
         libnuma1 \

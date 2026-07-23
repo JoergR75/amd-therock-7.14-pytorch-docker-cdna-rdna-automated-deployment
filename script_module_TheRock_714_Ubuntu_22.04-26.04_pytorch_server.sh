@@ -131,7 +131,7 @@ install_jammy() {
         hwloc \
         freeipmi-tools \
         libmsgpack-dev \
-        libstdc++-11-dev \
+        libstdc++-12-dev \
         libatomic1 \
         libquadmath0 \
         libnuma1 \

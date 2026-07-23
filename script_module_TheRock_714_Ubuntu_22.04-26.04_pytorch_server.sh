@@ -151,7 +151,7 @@ EOF
 
     print '\n 📦 Installing TheRock 7.14 complete Core SDK including runtimes, compilers, development tools, and dependencies ...\n'
 
-    sudo apt install -y amdrocm7.14
+    sudo apt install -y amdrocm7.14-gfx1201
 
     # Add ROCm binaries to PATH
     echo 'export PATH="/opt/rocm/bin:$PATH"' >> ~/.bashrc

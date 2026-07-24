@@ -48,7 +48,7 @@ exec > >(tee -a "$LOGFILE") 2>&1
 # ---------------------------------------------------------------------------------------------------------------
 # Author:                Joerg Roskowetz
 # Estimated Runtime:     ~15 minutes (depending on system performance and internet speed)
-# Last Updated:          July 21st, 2026
+# Last Updated:          July 24th, 2026
 # ================================================================================================================
 
 # global stdout method
@@ -94,7 +94,7 @@ install_jammy() {
     print '\n ✔️ Checking for PyTorch packages installed via pip ...\n'
 
     # Use pip with --break-system-packages to avoid "externally-managed-environment" error
-    if python3 -m pip list | grep torch; then
+    if python3 -m pip show torch >/dev/null 2>&1; then
         python3 -m pip uninstall -y torch torchvision torchaudio pytorch-triton-rocm
         printf "\nPyTorch packages uninstalled successfully.\n"
     else

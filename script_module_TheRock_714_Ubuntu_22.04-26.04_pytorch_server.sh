@@ -137,13 +137,16 @@ install_jammy() {
         libssl-dev
 
     # Download and install the AMD ROCm GPG key
-    sudo mkdir --parents --mode=0755 /etc/apt/keyrings
-    wget https://repo.amd.com/rocm/packages-multi-arch/gpg/rocm.gpg -O - | \
-        gpg --dearmor | sudo tee /etc/apt/keyrings/amdrocm.gpg > /dev/null
+    sudo install -d -m 0755 /etc/apt/keyrings
 
-    sudo tee /etc/apt/sources.list.d/rocm.list << EOF
+    wget -qO- https://repo.amd.com/rocm/packages-multi-arch/gpg/rocm.gpg \
+        | gpg --dearmor \
+        | sudo tee /etc/apt/keyrings/amdrocm.gpg >/dev/null
+
+    cat <<EOF | sudo tee /etc/apt/sources.list.d/rocm.list >/dev/null
     deb [arch=amd64 signed-by=/etc/apt/keyrings/amdrocm.gpg] https://repo.amd.com/rocm/packages-multi-arch/ubuntu2204 stable main
-EOF
+    EOF
+
     sudo apt update
 
     print '\n 📦 Installing TheRock 7.14 complete Core SDK including runtimes, compilers, development tools, and dependencies ...\n'

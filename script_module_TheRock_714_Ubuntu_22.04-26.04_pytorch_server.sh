@@ -75,6 +75,9 @@ install_focal() {
 install_jammy() {
     print '\nUbuntu 22.04.x (jammy jellyfish) TheRock stack installation method has been set.\n'
     print '\n ✔️ Checking if ROCm/TheRock is installed ...\n'
+    
+    if dpkg -l | grep -q rocm; then
+        print '\nROCm/TheRock detected. Removing ROCm/TheRock and associated packages ...\n'
 
     echo "Removing ROCm packages..."
     sudo apt autoremove -y amdrocm7.13

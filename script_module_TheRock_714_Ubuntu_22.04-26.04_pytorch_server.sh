@@ -79,13 +79,11 @@ install_jammy() {
     if dpkg -l | grep -q rocm; then
         print '\nROCm detected. Removing ROCm/TheRock and associated packages ...\n'
 
-        sudo apt autoremove -y amdrocm7.13
-        sudo apt autoremove -y amdrocm7.14
-        sudo apt autoremove -yq rocm-core
-        sudo apt autoremove -yq amdgpu-dkms
-        sudo rm /etc/apt/sources.list.d/rocm.list
+        sudo apt purge -y "amdrocm*" "rocm*" "amdgpu*"
+        sudo apt autoremove -y
+        sudo rm -f /etc/apt/sources.list.d/rocm.list
         sudo rm -rf /var/cache/apt/*
-        sudo apt clean all -yq
+        sudo apt clean
         sudo apt update
 
         print '\n ✅ ROCm/TheRock packages removed successfully.'
@@ -115,7 +113,6 @@ install_jammy() {
 
    # Install prerequisites
     sudo DEBIAN_FRONTEND=noninteractive apt update
-
     sudo DEBIAN_FRONTEND=noninteractive apt install -y \
         python3-pip \
         python3-venv \
@@ -153,29 +150,32 @@ EOF
 
     sudo apt install -y amdrocm7.14-gfx1201
 
-    # Add ROCm binaries to PATH
-    echo 'export PATH="/opt/rocm/bin:$PATH"' >> ~/.bashrc
+    grep -qxF 'export PATH="/opt/rocm/bin:$PATH"' ~/.bashrc || \
+        echo 'export PATH="/opt/rocm/bin:$PATH"' >> ~/.bashrc
 
-    # Add ROCm libraries to LD_LIBRARY_PATH
-    echo 'export LD_LIBRARY_PATH="/opt/rocm/lib:/opt/rocm/lib64:$LD_LIBRARY_PATH"' >> ~/.bashrc
+    grep -qxF 'export LD_LIBRARY_PATH="/opt/rocm/lib:/opt/rocm/lib64:$LD_LIBRARY_PATH"' ~/.bashrc || \
+        echo 'export LD_LIBRARY_PATH="/opt/rocm/lib:/opt/rocm/lib64:$LD_LIBRARY_PATH"' >> ~/.bashrc
 
-    # Add local user bin to PATH
-    echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+    grep -qxF 'export PATH="$HOME/.local/bin:$PATH"' ~/.bashrc || \
+        echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 
     # Apply changes immediately in current shell
-    source ~/.bashrc
+    export PATH="/opt/rocm/bin:$HOME/.local/bin:$PATH"
+    export LD_LIBRARY_PATH="/opt/rocm/lib:/opt/rocm/lib64:${LD_LIBRARY_PATH:-}"
 
     print '\n 📦 Installing PyTorch 2.12 (Stable) for TheRock 7.14, Transformers environment ...\n'
 
     python3 -m pip install --upgrade \
         pip \
         wheel \
-        setuptools
+        setuptools \
+        --break-system-packages
     python3 -m pip install \
         --index-url https://repo.amd.com/rocm/whl-multi-arch/ \
         "torch[device-gfx1201]==2.12.0+rocm7.14.0" \
         "torchvision[device-gfx1201]==0.27.0+rocm7.14.0" \
-        "torchaudio==2.11.0+rocm7.14.0"
+        "torchaudio==2.11.0+rocm7.14.0" \
+        --break-system-packages
     python3 -m pip install --upgrade \
         accelerate \
         datasets \
@@ -184,7 +184,8 @@ EOF
         protobuf \
         sentencepiece \
         setuptools_scm \
-        transformers
+        transformers \
+        --break-system-packages
 }
 
 install_noble() {

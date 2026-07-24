@@ -76,15 +76,18 @@ install_jammy() {
     print '\nUbuntu 22.04.x (jammy jellyfish) TheRock stack installation method has been set.\n'
     print '\n ✔️ Checking if ROCm/TheRock is installed ...\n'
 
-    if dpkg -l | grep -q rocm; then
-        print '\nROCm detected. Removing ROCm/TheRock and associated packages ...\n'
+    echo "Removing ROCm packages..."
 
-        sudo apt purge -y "amdrocm*" "rocm*" "amdgpu*"
-        sudo apt autoremove -y
-        sudo rm -f /etc/apt/sources.list.d/rocm.list
-        sudo rm -rf /var/cache/apt/*
-        sudo apt clean
-        sudo apt update
+    sudo apt purge -y $(dpkg -l | awk '/rocm|hip|hsa|amd-comgr|llvm-amdgpu|the-rock/ {print $2}') || true
+
+    sudo apt autoremove -y
+    sudo apt autoclean
+    sudo apt clean
+
+    sudo rm -rf /opt/rocm*
+    sudo rm -f /etc/apt/sources.list.d/rocm.list
+
+    sudo apt update
 
         print '\n ✅ ROCm/TheRock packages removed successfully.'
     else

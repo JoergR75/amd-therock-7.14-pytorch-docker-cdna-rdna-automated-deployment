@@ -19,7 +19,7 @@ exec > >(tee -a "$LOGFILE") 2>&1
 #   - Ubuntu 26.04.x LTS (Resolute Raccoon)
 #
 # Kernel Versions Tested:
-#   - Ubuntu 22.04.5: 5.15.0-186
+#   - Ubuntu 22.04.5: 6.8.0-136 (OEM) 5.15.0-186 (server)
 #   - Ubuntu 24.04.4: 6.17.0-1028-oem
 #   - Ubuntu 26.04.x: 7.0.0-28
 #

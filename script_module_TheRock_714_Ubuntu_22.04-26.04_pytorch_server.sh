@@ -64,6 +64,8 @@ print '\n 🔄 Ubuntu OS Update ...\n'
 
 sudo apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get -y upgrade
+sudo DEBIAN_FRONTEND=noninteractive apt-get -y autoremove
+sudo apt-get clean
 
 print '\n ✅ Done\n'
 

@@ -82,8 +82,7 @@ install_jammy() {
         print '\nROCm/TheRock detected. Removing ROCm/TheRock and associated packages ...\n'
 
     echo "Removing ROCm packages..."
-    sudo apt autoremove -y amdrocm7.13
-    sudo apt autoremove -y amdrocm7.14
+    sudo apt purge -y amdrocm7.13 amdrocm7.14 || true
     sudo apt purge -y $(dpkg -l | awk '/rocm|hip|hsa|amd-comgr|llvm-amdgpu|the-rock/ {print $2}') || true
 
     sudo apt autoremove -y

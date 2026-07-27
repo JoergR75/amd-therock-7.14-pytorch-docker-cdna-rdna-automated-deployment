@@ -72,7 +72,7 @@ Install **Ubuntu 22.04.5 LTS**, **Ubuntu 24.04.4 LTS** or **Ubuntu 26.04 LTS** (
 
 - Ubuntu 22.04.5:
   
-  During installation, it may be required to add `nomodeset` to the GRUB boot parameters to prevent boot hangs.
+  During the **server** installation, it may be required to add `nomodeset` to the GRUB boot parameters to prevent boot hangs.
 
   In the GRUB menu (for example, at **"Try or Install Ubuntu Server"**):
   - Highlight the installation entry
@@ -83,10 +83,10 @@ Install **Ubuntu 22.04.5 LTS**, **Ubuntu 24.04.4 LTS** or **Ubuntu 26.04 LTS** (
      linux /casper/vmlinuz
      ```
 
-  - Add `quiet splash nomodeset` before the final `---`:
+  - Add `nomodeset` before the final `---`:
 
      ```bash
-     linux /casper/vmlinuz quiet splash nomodeset ---
+     linux /casper/vmlinuz nomodeset ---
      ```
 
   - Press **Ctrl + X** or **F10** to boot with the updated parameters

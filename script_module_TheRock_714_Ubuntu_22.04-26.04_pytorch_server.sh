@@ -619,7 +619,7 @@ else:
     print("❌ No GPU detected")
 EOF
 
-set -e
+# set -e
 MIN_DOCKER_VERSION="29.0.0"
 
 # Function to compare Docker versions

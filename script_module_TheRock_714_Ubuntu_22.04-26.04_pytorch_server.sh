@@ -48,7 +48,7 @@ exec > >(tee -a "$LOGFILE") 2>&1
 # ---------------------------------------------------------------------------------------------------------------
 # Author:                Joerg Roskowetz
 # Estimated Runtime:     ~15 minutes (depending on system performance and internet speed)
-# Last Updated:          July 24th, 2026
+# Last Updated:          July 28th, 2026
 # ================================================================================================================
 
 # global stdout method

@@ -145,6 +145,8 @@ install_jammy() {
         numactl \
         libssl-dev
 
+    print '\n 📦 Installing AMD GPU (amdgpu-dkms) kernel driver verion 31.40.0 ...\n'
+
     # Install AMD GPU Driver (amdgpu) 31.40.0
     sudo mkdir --parents --mode=0755 /etc/apt/keyrings
 
@@ -156,7 +158,9 @@ install_jammy() {
 EOF
     sudo apt update
     sudo apt install -y amdgpu-dkms
-    
+
+    print '\n 📦 Installing TheRock 7.14 complete Core SDK including runtimes, compilers, development tools, and dependencies ...\n'
+
     # Download and install the AMD ROCm GPG key
     sudo mkdir --parents --mode=0755 /etc/apt/keyrings
     wget https://repo.amd.com/rocm/packages-multi-arch/gpg/rocm.gpg -O - | \
@@ -166,8 +170,6 @@ EOF
     deb [arch=amd64 signed-by=/etc/apt/keyrings/amdrocm.gpg] https://repo.amd.com/rocm/packages-multi-arch/ubuntu2204 stable main
 EOF
     sudo apt update
-
-    print '\n 📦 Installing TheRock 7.14 complete Core SDK including runtimes, compilers, development tools, and dependencies ...\n'
 
     sudo apt install -y amdrocm7.14-gfx1201
 

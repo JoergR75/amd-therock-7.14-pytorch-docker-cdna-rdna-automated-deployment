@@ -141,9 +141,9 @@ python3 test.py
 ```
 Expected Output Example:
 
-| Ubuntu 26.04 LTS | Ubuntu 24.04.4 LTS |
-|--------|--------|
-| ![](https://github.com/user-attachments/assets/d7731106-ea40-4f93-9509-680c684973b8) | ![](https://github.com/user-attachments/assets/4a937246-22f3-4c05-b465-09e47fa4968c) |
+| Ubuntu 26.04 LTS | Ubuntu 24.04.4 LTS | Ubuntu 22.04.5 LTS |
+|--------|--------|--------|
+| ![](https://github.com/user-attachments/assets/d7731106-ea40-4f93-9509-680c684973b8) | ![](https://github.com/user-attachments/assets/4a937246-22f3-4c05-b465-09e47fa4968c) | ![](https://github.com/user-attachments/assets/e61a2b73-ade5-4172-a907-d8c030574b24) |
 
 With `amd-smi`, you can verify all available GPUs (in this case, 2x Radeon AI PRO R9700 GPUs).
 

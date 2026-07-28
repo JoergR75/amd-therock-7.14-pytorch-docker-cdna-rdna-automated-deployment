@@ -84,6 +84,7 @@ install_jammy() {
     echo "Removing ROCm packages..."
     sudo apt purge -y amdrocm7.13 amdrocm7.14 || true
     sudo apt purge -y $(dpkg -l | awk '/rocm|hip|hsa|amd-comgr|llvm-amdgpu|the-rock/ {print $2}') || true
+    sudo apt autoremove -y amdgpu-dkms
 
     sudo apt autoremove -y
     sudo apt autoclean
@@ -144,6 +145,18 @@ install_jammy() {
         numactl \
         libssl-dev
 
+    # Install AMD GPU Driver (amdgpu) 31.40.0
+    sudo mkdir --parents --mode=0755 /etc/apt/keyrings
+
+    # Download the key, convert the signing-key to a full
+    wget https://repo.radeon.com/rocm/rocm.gpg.key -O - | \
+        gpg --dearmor | sudo tee /etc/apt/keyrings/rocm.gpg > /dev/null
+    sudo tee /etc/apt/sources.list.d/amdgpu.list << EOF
+    deb [arch=amd64 signed-by=/etc/apt/keyrings/rocm.gpg] https://repo.radeon.com/amdgpu/31.40/ubuntu jammy main
+EOF
+    sudo apt update
+    sudo apt install -y amdgpu-dkms
+    
     # Download and install the AMD ROCm GPG key
     sudo mkdir --parents --mode=0755 /etc/apt/keyrings
     wget https://repo.amd.com/rocm/packages-multi-arch/gpg/rocm.gpg -O - | \

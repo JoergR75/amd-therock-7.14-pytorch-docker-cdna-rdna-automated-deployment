@@ -171,7 +171,7 @@ EOF
 EOF
     sudo apt update
 
-    sudo apt install -y amdrocm7.14-gfx1201
+    sudo apt install -y amdrocm7.14
 
     grep -qxF 'export PATH="/opt/rocm/bin:$PATH"' ~/.bashrc || \
         echo 'export PATH="/opt/rocm/bin:$PATH"' >> ~/.bashrc

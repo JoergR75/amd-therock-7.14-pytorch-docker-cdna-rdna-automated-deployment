@@ -44,7 +44,7 @@ The entire setup process is fully unattended and optimized for both workstation 
 - **PyTorch Stable** with GPU acceleration
 - Preinstalled **Transformers**, **Accelerate**, **Diffusers**, and **Datasets**
 - Integrated **Docker environment** with ROCm GPU passthrough
-- **vLLM Docker images** for **RDNA4** & **CDNA**
+- **vLLM Docker images** for **RDNA4**
 - Optimized for **AI workloads**, **LLM inference**, and **model fine-tuning**
 
 ---

@@ -297,13 +297,15 @@ EOF
     sudo mkdir --parents --mode=0755 /etc/apt/keyrings
     wget https://repo.amd.com/rocm/packages-multi-arch/gpg/rocm.gpg -O - | \
         gpg --dearmor | sudo tee /etc/apt/keyrings/amdrocm.gpg > /dev/null
-    echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/amdrocm.gpg] https://repo.amd.com/rocm/packages-multi-arch/ubuntu2404 stable main" \
-        | sudo tee /etc/apt/sources.list.d/rocm.list > /dev/null
-    sudo apt update
+
+    sudo tee /etc/apt/sources.list.d/rocm.list << EOF
+    deb [arch=amd64 signed-by=/etc/apt/keyrings/amdrocm.gpg] https://repo.amd.com/rocm/packages-multi-arch/ubuntu2404 stable main
+EOF
+sudo apt update
 
     # Installing complete Core SDK including runtimes, compilers, development tools, and dependencies for GFX ID 120x
 
-    sudo apt install -y amdrocm7.14
+    sudo apt install -y amdrocm-core-sdk7.14
 
     # Add ROCm binaries to PATH
     info "Configuring shell environment..."

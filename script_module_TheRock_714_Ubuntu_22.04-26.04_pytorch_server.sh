@@ -301,7 +301,7 @@ EOF
     sudo tee /etc/apt/sources.list.d/rocm.list << EOF
     deb [arch=amd64 signed-by=/etc/apt/keyrings/amdrocm.gpg] https://repo.amd.com/rocm/packages-multi-arch/ubuntu2404 stable main
 EOF
-sudo apt update
+    sudo apt update
 
     # Installing complete Core SDK including runtimes, compilers, development tools, and dependencies for GFX ID 120x
 

@@ -193,10 +193,10 @@ Compilation can take several minutes depending on HW used
 
 3️⃣ Get P2P transfer and bandwidth tested
 ```bash
-./TransferBench cmdline 1G "1 1 (G0->G0->G1)"
+./TransferBench p2p
 ```
 
-<img width="1821" height="1820" alt="image" src="https://github.com/user-attachments/assets/e33a1a1e-0f10-43d1-bb4b-baf1d36be3f7" />
+<img width="1725" height="828" alt="image" src="https://github.com/user-attachments/assets/30b9e4c4-9e45-4629-abd6-82ba9a04910a" />
 
 ### ⚙️ How to Enable **Re-Size BAR** in SBIOS (example ASRock WRX90 evo)
 

@@ -191,7 +191,7 @@ Compilation can take several minutes depending on HW used
 
 <img width="2277" height="1712" alt="image" src="https://github.com/user-attachments/assets/99e735dc-78c0-4cb4-8427-46670e7a29ab" />
 
-3️⃣ Get the P2P tested
+3️⃣ Get P2P transfer and bandwidth tested
 ```bash
 ./TransferBench cmdline 1G "1 1 (G0->G0->G1)"
 ```

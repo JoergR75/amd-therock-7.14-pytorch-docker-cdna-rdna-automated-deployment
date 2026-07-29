@@ -151,6 +151,31 @@ With `amd-smi`, you can verify all available GPUs (in this case, 2x Radeon AI PR
 Make sure **"Re-Size BAR"** is enabled in the **SBIOS**.  
 If it is disabled, **P2P** will be deactivated.
 
+## 📶 TransferBench
+
+**TransferBench** is a utility for benchmarking simultaneous memory transfers between user-specified devices (CPUs, GPUs, and NICs).
+
+### What it does
+
+`TransferBench` is a diagnostic tool that measures **memory bandwidth performance** between:
+
+- Host (CPU) ↔ GPU(s)  
+- GPU ↔ GPU (if multiple GPUs are installed)  
+- GPU internal memory
+
+### Features
+TransferBench supports the following features:
+
+- Multiple Executors: CPU threads, GPU compute kernels (GFX), GPU DMA engines (SDMA), and NIC RDMA.
+
+- Multi-input or multi-output (MIMO) transfers: Element-wise sum from multiple SRCs to multiple DSTs.
+
+- Multinode execution: Runs across distributed systems using MPI or sockets.
+
+- Flexible configuration: Configure benchmarks using config files or presets.
+
+- Flexible hardware: Runs HIP and CUDA programs on both AMD and NVIDIA hardware.
+
 ### ⚙️ How to Enable **Re-Size BAR** in SBIOS (example ASRock WRX90 evo)
 
 1. Enter **SBIOS**

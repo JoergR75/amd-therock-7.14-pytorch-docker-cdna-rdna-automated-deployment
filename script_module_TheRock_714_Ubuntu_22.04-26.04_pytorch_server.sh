@@ -30,6 +30,7 @@ exec > >(tee -a "$LOGFILE") 2>&1
 # ---------------------------------------------------------------------------------------------------------------
 # ROCm Platform:         7.14
 # ROCm Release Notes:    https://rocm.docs.amd.com/en/docs-7.14.0/about/release-notes.html
+# amdgpu-dkms:           31.40.0
 #
 # PyTorch:               2.12.0+rocm7.14.0
 # Transformers:          5.14.1

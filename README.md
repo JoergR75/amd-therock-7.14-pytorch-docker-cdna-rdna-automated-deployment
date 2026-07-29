@@ -20,7 +20,7 @@ The developer toolchain further includes essential C/C++ build utilities and low
 
 To validate the installation, the deployment automatically generates a verification script that performs end-to-end GPU checks, including ROCm runtime detection, PyTorch HIP availability, GPU enumeration, and successful on-device tensor execution.
 
-The entire setup process is fully unattended and optimized for both workstation and server deployments. Before installation, the script detects existing ROCm or pip-installed PyTorch environments and removes conflicting packages—including ROCm-specific PyTorch builds—before configuring the AMD package repository and installing the kernel driver, ensuring a clean, reproducible deployment state.
+The entire setup process is fully unattended and optimized for both workstation and server deployments. Before installation, the script detects existing ROCm or pip-installed PyTorch environments and removes conflicting packages - including ROCm-specific PyTorch builds - before configuring the AMD package repository and installing the kernel driver, ensuring a clean, reproducible deployment state.
 
 ---
 

@@ -171,6 +171,14 @@ TransferBench supports the following features:
 - Flexible configuration: Configure benchmarks using config files or presets.
 - Flexible hardware: Runs HIP and CUDA programs on both AMD and NVIDIA hardware.
 
+### How to install?
+Install prerequisites
+```bash
+sudo apt install -y rdma-core libibverbs-dev ibverbs-utils
+sudo apt install -y openmpi-bin libopenmpi-dev
+sudo apt-get install -y mpich libmpich-dev
+```
+
 ### ⚙️ How to Enable **Re-Size BAR** in SBIOS (example ASRock WRX90 evo)
 
 1. Enter **SBIOS**

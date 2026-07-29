@@ -286,7 +286,7 @@ install_noble() {
     wget https://repo.radeon.com/rocm/rocm.gpg.key -O - | \
         gpg --dearmor | sudo tee /etc/apt/keyrings/rocm.gpg > /dev/null
     sudo tee /etc/apt/sources.list.d/amdgpu.list << EOF
-    deb [arch=amd64 signed-by=/etc/apt/keyrings/rocm.gpg] https://repo.radeon.com/amdgpu/31.40/ubuntu jammy main
+    deb [arch=amd64 signed-by=/etc/apt/keyrings/rocm.gpg] https://repo.radeon.com/amdgpu/31.40/ubuntu noble main
 EOF
     sudo apt update
     sudo apt install -y amdgpu-dkms

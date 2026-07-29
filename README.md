@@ -172,12 +172,22 @@ TransferBench supports the following features:
 - Flexible hardware: Runs HIP and CUDA programs on both AMD and NVIDIA hardware.
 
 ### How to install?
-Install prerequisites
+1️⃣ Install prerequisites
 ```bash
 sudo apt install -y rdma-core libibverbs-dev ibverbs-utils
 sudo apt install -y openmpi-bin libopenmpi-dev
 sudo apt-get install -y mpich libmpich-dev
 ```
+
+2️⃣ Compile from Source
+```bash
+git clone https://github.com/ROCm/TransferBench.git
+cd TransferBench
+mkdir build && cd build
+cmake ..
+make
+```
+
 
 ### ⚙️ How to Enable **Re-Size BAR** in SBIOS (example ASRock WRX90 evo)
 

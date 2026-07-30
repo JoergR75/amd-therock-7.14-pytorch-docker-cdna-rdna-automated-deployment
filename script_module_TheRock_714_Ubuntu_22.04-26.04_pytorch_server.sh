@@ -332,8 +332,8 @@ EOF
         setuptools --break-system-packages
     python3 -m pip install \
         --index-url https://repo.amd.com/rocm/whl-multi-arch/ \
-        "torch[device-gfx1201]==2.12.0+rocm7.14.0" \
-        "torchvision[device-gfx1201]==0.27.0+rocm7.14.0" \
+        "torch[device-all]==2.12.0+rocm7.14.0" \
+        "torchvision[device-all]==0.27.0+rocm7.14.0" \
         "torchaudio==2.11.0+rocm7.14.0" --break-system-packages
     python3 -m pip install --upgrade \
         accelerate \

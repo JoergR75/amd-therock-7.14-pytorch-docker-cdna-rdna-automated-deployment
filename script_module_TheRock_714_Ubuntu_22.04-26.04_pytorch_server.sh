@@ -354,19 +354,23 @@ install_resolute() {
     if dpkg -l | grep -q rocm; then
         print '\nROCm/TheRock detected. Removing ROCm/TheRock and associated packages ...\n'
 
-        sudo apt autoremove -y amdrocm7.13
-        sudo apt autoremove -y amdrocm7.14
-        sudo apt autoremove -y rocm-core
+        echo "Removing ROCm packages..."
+        sudo apt purge -y amdrocm7.13 amdrocm7.14 || true
+        sudo apt purge -y $(dpkg -l | awk '/rocm|hip|hsa|amd-comgr|llvm-amdgpu|the-rock/ {print $2}') || true
         sudo apt autoremove -y amdgpu-dkms
-        sudo rm /etc/apt/sources.list.d/rocm.list
-        #sudo apt autoremove -y rocm-bandwidth-test
-        sudo rm -rf /var/cache/apt/*
-        sudo apt clean all
+
+        sudo apt autoremove -y
+        sudo apt autoclean
+        sudo apt clean
+
+        sudo rm -rf /opt/rocm*
+        sudo rm -f /etc/apt/sources.list.d/rocm.list
+
         sudo apt update
 
         print '\n ✅ ROCm/TheRock packages removed successfully.'
     else
-        print 'No ROCm/TheRock version installation detected.'
+        print 'No ROCm/TheRock installation detected.'
     fi
 
     print '\n ✔️ Checking for PyTorch packages installed via pip ...\n'
@@ -411,6 +415,24 @@ install_resolute() {
         numactl \
         libssl-dev
 
+    print '\n 📦 Installing AMD GPU (amdgpu-dkms) kernel driver verion 31.40.0 ...\n'
+
+    # Install AMD GPU Driver (amdgpu) 31.40.0
+    sudo mkdir --parents --mode=0755 /etc/apt/keyrings
+
+    # Download the key, convert the signing-key to a full
+    wget https://repo.radeon.com/rocm/rocm.gpg.key -O - | \
+        gpg --dearmor | sudo tee /etc/apt/keyrings/rocm.gpg > /dev/null
+
+    # Download the key, convert the signing-key to a full
+    sudo tee /etc/apt/sources.list.d/amdgpu.list << EOF
+    deb [arch=amd64 signed-by=/etc/apt/keyrings/rocm.gpg] https://repo.radeon.com/amdgpu/31.40/ubuntu resolute main
+EOF
+    sudo apt update
+    sudo apt install -y amdgpu-dkms
+
+    print '\n 📦 Installing TheRock 7.14 complete Core SDK including runtimes, compilers, development tools, and dependencies\n'
+
     # Download and install the AMD ROCm GPG key
     sudo mkdir --parents --mode=0755 /etc/apt/keyrings
     wget https://repo.amd.com/rocm/packages-multi-arch/gpg/rocm.gpg -O - | \
@@ -422,8 +444,6 @@ EOF
     sudo apt update
 
     # Installing complete Core SDK including runtimes, compilers, development tools, and dependencies
-
-    print '\n 📦 Installing TheRock 7.14 complete Core SDK including runtimes, compilers, development tools, and dependencies\n'
 
     sudo apt install -y amdrocm-core-sdk7.14
 
@@ -451,8 +471,8 @@ EOF
         setuptools --break-system-packages
     python3 -m pip install \
         --index-url https://repo.amd.com/rocm/whl-multi-arch/ \
-        "torch[device-gfx1201]==2.12.0+rocm7.14.0" \
-        "torchvision[device-gfx1201]==0.27.0+rocm7.14.0" \
+        "torch[device-all]==2.12.0+rocm7.14.0" \
+        "torchvision[device-all]==0.27.0+rocm7.14.0" \
         "torchaudio==2.11.0+rocm7.14.0" --break-system-packages
     python3 -m pip install --upgrade \
         accelerate \

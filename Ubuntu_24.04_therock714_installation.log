@@ -16,15 +16,17 @@ Calculating upgrade...
 The following packages have been kept back:
   fwupd
 The following packages will be upgraded:
-  apparmor apport apport-core-dump-handler cloud-init coreutils iproute2
-  kpartx libapparmor1 libfwupd2 libjcat1 libnetplan1 libnftables1 libplymouth5
-  libxmlb2 linux-base lshw multipath-tools netplan-generator netplan.io
-  nftables open-vm-tools plymouth plymouth-theme-ubuntu-text python3-apport
-  python3-netplan python3-problem-report python3-software-properties
-  software-properties-common sosreport systemd-hwe-hwdb ubuntu-drivers-common
-31 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
-Need to get 7,228 kB of archives.
-After this operation, 201 kB of additional disk space will be used.
+  apparmor apport apport-core-dump-handler cloud-init coreutils
+  distro-info-data iproute2 kpartx libapparmor1 libfwupd2 libjcat1 libnetplan1
+  libnftables1 libplymouth5 libxmlb2 linux-base lshw multipath-tools
+  netplan-generator netplan.io nftables open-vm-tools plymouth
+  plymouth-theme-ubuntu-text python3-apport python3-netplan
+  python3-problem-report python3-software-properties
+  software-properties-common sosreport systemd-hwe-hwdb tzdata
+  ubuntu-drivers-common
+33 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+Need to get 7,515 kB of archives.
+After this operation, 200 kB of additional disk space will be used.
 Get:1 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 coreutils amd64 9.4-3ubuntu6.2 [1,412 kB]
 Get:2 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-problem-report all 2.28.2-0ubuntu0.1 [26.0 kB]
 Get:3 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-apport all 2.28.2-0ubuntu0.1 [92.9 kB]
@@ -33,31 +35,33 @@ Get:5 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 apport all 2.
 Get:6 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 ubuntu-drivers-common amd64 1:0.9.7.6ubuntu3.7 [66.5 kB]
 Get:7 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 iproute2 amd64 6.1.0-1ubuntu6.4 [1,120 kB]
 Get:8 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 open-vm-tools amd64 2:13.0.0-2~ubuntu0.24.04.1 [723 kB]
-Get:9 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libapparmor1 amd64 4.0.1really4.0.1-0ubuntu0.24.04.7 [51.3 kB]
-Get:10 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 netplan-generator amd64 1.1.2-8ubuntu1~24.04.2 [61.2 kB]
-Get:11 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-netplan amd64 1.1.2-8ubuntu1~24.04.2 [24.3 kB]
-Get:12 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 netplan.io amd64 1.1.2-8ubuntu1~24.04.2 [69.8 kB]
-Get:13 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libnetplan1 amd64 1.1.2-8ubuntu1~24.04.2 [133 kB]
-Get:14 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 systemd-hwe-hwdb all 255.1.7 [3,716 B]
-Get:15 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 apparmor amd64 4.0.1really4.0.1-0ubuntu0.24.04.7 [640 kB]
-Get:16 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 nftables amd64 1.0.9-1ubuntu0.1 [69.8 kB]
-Get:17 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libnftables1 amd64 1.0.9-1ubuntu0.1 [359 kB]
-Get:18 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libplymouth5 amd64 24.004.60-1ubuntu7.2 [137 kB]
-Get:19 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 lshw amd64 02.19.git.2021.06.19.996aaad9c7-2ubuntu0.24.04.1 [334 kB]
-Get:20 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 plymouth-theme-ubuntu-text amd64 24.004.60-1ubuntu7.2 [9,924 B]
-Get:21 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 plymouth amd64 24.004.60-1ubuntu7.2 [134 kB]
-Get:22 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libjcat1 amd64 0.2.3-1~ubuntu0.24.04.1 [34.3 kB]
-Get:23 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libfwupd2 amd64 1.9.34-0ubuntu1~24.04.1 [139 kB]
-Get:24 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libxmlb2 amd64 0.3.24-1~ubuntu0.24.04.1 [67.6 kB]
-Get:25 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-base all 4.5ubuntu9+24.04.2 [19.6 kB]
-Get:26 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 software-properties-common all 0.99.49.4 [14.4 kB]
-Get:27 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-software-properties all 0.99.49.4 [30.0 kB]
-Get:28 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 sosreport amd64 4.10.2-0ubuntu0~24.04.1 [381 kB]
-Get:29 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 cloud-init all 26.1-0ubuntu1~24.04.1 [629 kB]
-Get:30 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 kpartx amd64 0.9.4-5ubuntu8.2 [32.2 kB]
-Get:31 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 multipath-tools amd64 0.9.4-5ubuntu8.2 [310 kB]
+Get:9 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 distro-info-data all 0.72-0ubuntu0.24.04.1 [7,598 B]
+Get:10 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libapparmor1 amd64 4.0.1really4.0.1-0ubuntu0.24.04.7 [51.3 kB]
+Get:11 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 netplan-generator amd64 1.1.2-8ubuntu1~24.04.2 [61.2 kB]
+Get:12 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-netplan amd64 1.1.2-8ubuntu1~24.04.2 [24.3 kB]
+Get:13 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 netplan.io amd64 1.1.2-8ubuntu1~24.04.2 [69.8 kB]
+Get:14 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libnetplan1 amd64 1.1.2-8ubuntu1~24.04.2 [133 kB]
+Get:15 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 systemd-hwe-hwdb all 255.1.7 [3,716 B]
+Get:16 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 tzdata all 2026c-0ubuntu0.24.04.1 [280 kB]
+Get:17 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 apparmor amd64 4.0.1really4.0.1-0ubuntu0.24.04.7 [640 kB]
+Get:18 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 nftables amd64 1.0.9-1ubuntu0.1 [69.8 kB]
+Get:19 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libnftables1 amd64 1.0.9-1ubuntu0.1 [359 kB]
+Get:20 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libplymouth5 amd64 24.004.60-1ubuntu7.2 [137 kB]
+Get:21 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 lshw amd64 02.19.git.2021.06.19.996aaad9c7-2ubuntu0.24.04.1 [334 kB]
+Get:22 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 plymouth-theme-ubuntu-text amd64 24.004.60-1ubuntu7.2 [9,924 B]
+Get:23 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 plymouth amd64 24.004.60-1ubuntu7.2 [134 kB]
+Get:24 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libjcat1 amd64 0.2.3-1~ubuntu0.24.04.1 [34.3 kB]
+Get:25 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libfwupd2 amd64 1.9.34-0ubuntu1~24.04.1 [139 kB]
+Get:26 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libxmlb2 amd64 0.3.24-1~ubuntu0.24.04.1 [67.6 kB]
+Get:27 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-base all 4.5ubuntu9+24.04.2 [19.6 kB]
+Get:28 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 software-properties-common all 0.99.49.4 [14.4 kB]
+Get:29 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-software-properties all 0.99.49.4 [30.0 kB]
+Get:30 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 sosreport amd64 4.10.2-0ubuntu0~24.04.1 [381 kB]
+Get:31 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 cloud-init all 26.1-0ubuntu1~24.04.1 [629 kB]
+Get:32 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 kpartx amd64 0.9.4-5ubuntu8.2 [32.2 kB]
+Get:33 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 multipath-tools amd64 0.9.4-5ubuntu8.2 [310 kB]
 Preconfiguring packages ...
-Fetched 7,228 kB in 0s (16.6 MB/s)
+Fetched 7,515 kB in 0s (16.1 MB/s)
 (Reading database ... 
 (Reading database ... 5%
 (Reading database ... 10%
@@ -119,52 +123,56 @@ Preparing to unpack .../05-iproute2_6.1.0-1ubuntu6.4_amd64.deb ...
 Unpacking iproute2 (6.1.0-1ubuntu6.4) over (6.1.0-1ubuntu6.2) ...
 Preparing to unpack .../06-open-vm-tools_2%3a13.0.0-2~ubuntu0.24.04.1_amd64.deb ...
 Unpacking open-vm-tools (2:13.0.0-2~ubuntu0.24.04.1) over (2:12.5.0-1~ubuntu0.24.04.2) ...
-Preparing to unpack .../07-libapparmor1_4.0.1really4.0.1-0ubuntu0.24.04.7_amd64.deb ...
+Preparing to unpack .../07-distro-info-data_0.72-0ubuntu0.24.04.1_all.deb ...
+Unpacking distro-info-data (0.72-0ubuntu0.24.04.1) over (0.60ubuntu0.6) ...
+Preparing to unpack .../08-libapparmor1_4.0.1really4.0.1-0ubuntu0.24.04.7_amd64.deb ...
 Unpacking libapparmor1:amd64 (4.0.1really4.0.1-0ubuntu0.24.04.7) over (4.0.1really4.0.1-0ubuntu0.24.04.5) ...
-Preparing to unpack .../08-netplan-generator_1.1.2-8ubuntu1~24.04.2_amd64.deb ...
+Preparing to unpack .../09-netplan-generator_1.1.2-8ubuntu1~24.04.2_amd64.deb ...
 Adding 'diversion of /lib/systemd/system-generators/netplan to /lib/systemd/system-generators/netplan.usr-is-merged by netplan-generator'
 Unpacking netplan-generator (1.1.2-8ubuntu1~24.04.2) over (1.1.2-8ubuntu1~24.04.1) ...
-Preparing to unpack .../09-python3-netplan_1.1.2-8ubuntu1~24.04.2_amd64.deb ...
+Preparing to unpack .../10-python3-netplan_1.1.2-8ubuntu1~24.04.2_amd64.deb ...
 Unpacking python3-netplan (1.1.2-8ubuntu1~24.04.2) over (1.1.2-8ubuntu1~24.04.1) ...
-Preparing to unpack .../10-netplan.io_1.1.2-8ubuntu1~24.04.2_amd64.deb ...
+Preparing to unpack .../11-netplan.io_1.1.2-8ubuntu1~24.04.2_amd64.deb ...
 Unpacking netplan.io (1.1.2-8ubuntu1~24.04.2) over (1.1.2-8ubuntu1~24.04.1) ...
-Preparing to unpack .../11-libnetplan1_1.1.2-8ubuntu1~24.04.2_amd64.deb ...
+Preparing to unpack .../12-libnetplan1_1.1.2-8ubuntu1~24.04.2_amd64.deb ...
 Unpacking libnetplan1:amd64 (1.1.2-8ubuntu1~24.04.2) over (1.1.2-8ubuntu1~24.04.1) ...
-Preparing to unpack .../12-systemd-hwe-hwdb_255.1.7_all.deb ...
+Preparing to unpack .../13-systemd-hwe-hwdb_255.1.7_all.deb ...
 Unpacking systemd-hwe-hwdb (255.1.7) over (255.1.6) ...
-Preparing to unpack .../13-apparmor_4.0.1really4.0.1-0ubuntu0.24.04.7_amd64.deb ...
+Preparing to unpack .../14-tzdata_2026c-0ubuntu0.24.04.1_all.deb ...
+Unpacking tzdata (2026c-0ubuntu0.24.04.1) over (2026b-0ubuntu0.24.04.1) ...
+Preparing to unpack .../15-apparmor_4.0.1really4.0.1-0ubuntu0.24.04.7_amd64.deb ...
 Unpacking apparmor (4.0.1really4.0.1-0ubuntu0.24.04.7) over (4.0.1really4.0.1-0ubuntu0.24.04.5) ...
-Preparing to unpack .../14-nftables_1.0.9-1ubuntu0.1_amd64.deb ...
+Preparing to unpack .../16-nftables_1.0.9-1ubuntu0.1_amd64.deb ...
 Unpacking nftables (1.0.9-1ubuntu0.1) over (1.0.9-1build1) ...
-Preparing to unpack .../15-libnftables1_1.0.9-1ubuntu0.1_amd64.deb ...
+Preparing to unpack .../17-libnftables1_1.0.9-1ubuntu0.1_amd64.deb ...
 Unpacking libnftables1:amd64 (1.0.9-1ubuntu0.1) over (1.0.9-1build1) ...
-Preparing to unpack .../16-libplymouth5_24.004.60-1ubuntu7.2_amd64.deb ...
+Preparing to unpack .../18-libplymouth5_24.004.60-1ubuntu7.2_amd64.deb ...
 Unpacking libplymouth5:amd64 (24.004.60-1ubuntu7.2) over (24.004.60-1ubuntu7.1) ...
-Preparing to unpack .../17-lshw_02.19.git.2021.06.19.996aaad9c7-2ubuntu0.24.04.1_amd64.deb ...
+Preparing to unpack .../19-lshw_02.19.git.2021.06.19.996aaad9c7-2ubuntu0.24.04.1_amd64.deb ...
 Unpacking lshw (02.19.git.2021.06.19.996aaad9c7-2ubuntu0.24.04.1) over (02.19.git.2021.06.19.996aaad9c7-2build3) ...
-Preparing to unpack .../18-plymouth-theme-ubuntu-text_24.004.60-1ubuntu7.2_amd64.deb ...
+Preparing to unpack .../20-plymouth-theme-ubuntu-text_24.004.60-1ubuntu7.2_amd64.deb ...
 Unpacking plymouth-theme-ubuntu-text (24.004.60-1ubuntu7.2) over (24.004.60-1ubuntu7.1) ...
-Preparing to unpack .../19-plymouth_24.004.60-1ubuntu7.2_amd64.deb ...
+Preparing to unpack .../21-plymouth_24.004.60-1ubuntu7.2_amd64.deb ...
 Unpacking plymouth (24.004.60-1ubuntu7.2) over (24.004.60-1ubuntu7.1) ...
-Preparing to unpack .../20-libjcat1_0.2.3-1~ubuntu0.24.04.1_amd64.deb ...
+Preparing to unpack .../22-libjcat1_0.2.3-1~ubuntu0.24.04.1_amd64.deb ...
 Unpacking libjcat1:amd64 (0.2.3-1~ubuntu0.24.04.1) over (0.2.0-2build3) ...
-Preparing to unpack .../21-libfwupd2_1.9.34-0ubuntu1~24.04.1_amd64.deb ...
+Preparing to unpack .../23-libfwupd2_1.9.34-0ubuntu1~24.04.1_amd64.deb ...
 Unpacking libfwupd2:amd64 (1.9.34-0ubuntu1~24.04.1) over (1.9.33-0ubuntu1~24.04.1ubuntu1) ...
-Preparing to unpack .../22-libxmlb2_0.3.24-1~ubuntu0.24.04.1_amd64.deb ...
+Preparing to unpack .../24-libxmlb2_0.3.24-1~ubuntu0.24.04.1_amd64.deb ...
 Unpacking libxmlb2:amd64 (0.3.24-1~ubuntu0.24.04.1) over (0.3.18-1) ...
-Preparing to unpack .../23-linux-base_4.5ubuntu9+24.04.2_all.deb ...
+Preparing to unpack .../25-linux-base_4.5ubuntu9+24.04.2_all.deb ...
 Unpacking linux-base (4.5ubuntu9+24.04.2) over (4.5ubuntu9+24.04.1) ...
-Preparing to unpack .../24-software-properties-common_0.99.49.4_all.deb ...
+Preparing to unpack .../26-software-properties-common_0.99.49.4_all.deb ...
 Unpacking software-properties-common (0.99.49.4) over (0.99.49.3) ...
-Preparing to unpack .../25-python3-software-properties_0.99.49.4_all.deb ...
+Preparing to unpack .../27-python3-software-properties_0.99.49.4_all.deb ...
 Unpacking python3-software-properties (0.99.49.4) over (0.99.49.3) ...
-Preparing to unpack .../26-sosreport_4.10.2-0ubuntu0~24.04.1_amd64.deb ...
+Preparing to unpack .../28-sosreport_4.10.2-0ubuntu0~24.04.1_amd64.deb ...
 Unpacking sosreport (4.10.2-0ubuntu0~24.04.1) over (4.9.2-0ubuntu0~24.04.1) ...
-Preparing to unpack .../27-cloud-init_26.1-0ubuntu1~24.04.1_all.deb ...
+Preparing to unpack .../29-cloud-init_26.1-0ubuntu1~24.04.1_all.deb ...
 Unpacking cloud-init (26.1-0ubuntu1~24.04.1) over (25.2-0ubuntu1~24.04.1) ...
-Preparing to unpack .../28-kpartx_0.9.4-5ubuntu8.2_amd64.deb ...
+Preparing to unpack .../30-kpartx_0.9.4-5ubuntu8.2_amd64.deb ...
 Unpacking kpartx (0.9.4-5ubuntu8.2) over (0.9.4-5ubuntu8.1) ...
-Preparing to unpack .../29-multipath-tools_0.9.4-5ubuntu8.2_amd64.deb ...
+Preparing to unpack .../31-multipath-tools_0.9.4-5ubuntu8.2_amd64.deb ...
 Unpacking multipath-tools (0.9.4-5ubuntu8.2) over (0.9.4-5ubuntu8.1) ...
 Setting up libapparmor1:amd64 (4.0.1really4.0.1-0ubuntu0.24.04.7) ...
 Setting up libnftables1:amd64 (1.0.9-1ubuntu0.1) ...
@@ -172,12 +180,20 @@ Setting up linux-base (4.5ubuntu9+24.04.2) ...
 Setting up nftables (1.0.9-1ubuntu0.1) ...
 Setting up ubuntu-drivers-common (1:0.9.7.6ubuntu3.7) ...
 Setting up python3-problem-report (2.28.2-0ubuntu0.1) ...
+Setting up distro-info-data (0.72-0ubuntu0.24.04.1) ...
 Setting up iproute2 (6.1.0-1ubuntu6.4) ...
 Setting up libxmlb2:amd64 (0.3.24-1~ubuntu0.24.04.1) ...
 Setting up libnetplan1:amd64 (1.1.2-8ubuntu1~24.04.2) ...
 Setting up lshw (02.19.git.2021.06.19.996aaad9c7-2ubuntu0.24.04.1) ...
 Setting up libjcat1:amd64 (0.2.3-1~ubuntu0.24.04.1) ...
 Setting up python3-apport (2.28.2-0ubuntu0.1) ...
+Setting up tzdata (2026c-0ubuntu0.24.04.1) ...
+
+Current default time zone: 'Etc/UTC'
+Local time is now:      Thu Jul 30 13:03:43 UTC 2026.
+Universal Time is now:  Thu Jul 30 13:03:43 UTC 2026.
+Run 'dpkg-reconfigure tzdata' if you wish to change it.
+
 Setting up apparmor (4.0.1really4.0.1-0ubuntu0.24.04.7) ...
 Removing obsolete conffile /etc/apparmor.d/busybox ...
 Removing obsolete conffile /etc/apparmor.d/nautilus ...
@@ -231,8 +247,8 @@ Service restarts being deferred:
 No containers need to be restarted.
 
 User sessions running outdated binaries:
- ai1 @ session #4: bash[7506]
- ai1 @ user manager service: systemd[3455]
+ ai1 @ session #3: bash[3937]
+ ai1 @ user manager service: systemd[3694]
 
 No VM guests are running outdated hypervisor (qemu) binaries on this host.
 Reading package lists...
@@ -278,7 +294,7 @@ Get:1 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-oem-6.1
 Get:2 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-headers-6.17.0-1028-oem amd64 6.17.0-1028.28 [4,066 kB]
 Get:3 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-modules-6.17.0-1028-oem amd64 6.17.0-1028.28 [164 MB]
 Get:4 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-image-6.17.0-1028-oem amd64 6.17.0-1028.28 [15.8 MB]
-Fetched 199 MB in 6s (31.5 MB/s)
+Fetched 199 MB in 6s (31.1 MB/s)
 Selecting previously unselected package linux-oem-6.17-headers-6.17.0-1028.
 (Reading database ... 
 (Reading database ... 5%
@@ -301,7 +317,7 @@ Selecting previously unselected package linux-oem-6.17-headers-6.17.0-1028.
 (Reading database ... 90%
 (Reading database ... 95%
 (Reading database ... 100%
-(Reading database ... 88482 files and directories currently installed.)
+(Reading database ... 88484 files and directories currently installed.)
 Preparing to unpack .../linux-oem-6.17-headers-6.17.0-1028_6.17.0-1028.28_all.deb ...
 Unpacking linux-oem-6.17-headers-6.17.0-1028 (6.17.0-1028.28) ...
 Selecting previously unselected package linux-headers-6.17.0-1028-oem.
@@ -353,8 +369,8 @@ Service restarts being deferred:
 No containers need to be restarted.
 
 User sessions running outdated binaries:
- ai1 @ session #4: bash[7506]
- ai1 @ user manager service: systemd[3455]
+ ai1 @ session #3: bash[3937]
+ ai1 @ user manager service: systemd[3694]
 
 No VM guests are running outdated hypervisor (qemu) binaries on this host.
 
@@ -505,7 +521,7 @@ Get:73 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 freeipmi-too
 Get:74 http://de.archive.ubuntu.com/ubuntu noble/universe amd64 libmsgpackc2 amd64 4.0.0-3build1 [15.3 kB]
 Get:75 http://de.archive.ubuntu.com/ubuntu noble/universe amd64 libmsgpack-dev amd64 4.0.0-3build1 [31.2 kB]
 Get:76 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libnuma-dev amd64 2.0.18-1ubuntu0.24.04.1 [37.0 kB]
-Fetched 107 MB in 9s (11.3 MB/s)
+Fetched 107 MB in 3s (30.5 MB/s)
 Selecting previously unselected package binutils-common:amd64.
 (Reading database ... 
 (Reading database ... 5%
@@ -528,7 +544,7 @@ Selecting previously unselected package binutils-common:amd64.
 (Reading database ... 90%
 (Reading database ... 95%
 (Reading database ... 100%
-(Reading database ... 128520 files and directories currently installed.)
+(Reading database ... 128522 files and directories currently installed.)
 Preparing to unpack .../00-binutils-common_2.42-4ubuntu2.10_amd64.deb ...
 Unpacking binutils-common:amd64 (2.42-4ubuntu2.10) ...
 Selecting previously unselected package libsframe1:amd64.
@@ -856,35 +872,35 @@ Service restarts being deferred:
 No containers need to be restarted.
 
 User sessions running outdated binaries:
- ai1 @ session #4: bash[7506]
- ai1 @ user manager service: systemd[3455]
+ ai1 @ session #3: bash[3937]
+ ai1 @ user manager service: systemd[3694]
 
 No VM guests are running outdated hypervisor (qemu) binaries on this host.
 [1;32m	
  📦 Installing AMD GPU (amdgpu-dkms) kernel driver verion 31.40.0 ...
 [1;35m
---2026-07-29 12:38:05--  https://repo.radeon.com/rocm/rocm.gpg.key
-Resolving repo.radeon.com (repo.radeon.com)... 2a02:26f0:f500:8::5c7b:8564, 2a02:26f0:f500:8::5c7b:8558, 92.123.133.100, ...
+--2026-07-30 13:09:13--  https://repo.radeon.com/rocm/rocm.gpg.key
+Resolving repo.radeon.com (repo.radeon.com)... 2a02:26f0:f500:8::5c7b:8564, 2a02:26f0:f500:8::5c7b:8558, 92.123.133.88, ...
 Connecting to repo.radeon.com (repo.radeon.com)|2a02:26f0:f500:8::5c7b:8564|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 3126 (3.1K) [application/octet-stream]
 Saving to: ‘STDOUT’
 
-     0K ...                                                   100% 3.35G=0s
+     0K ...                                                   100% 3.64G=0s
 
-2026-07-29 12:38:05 (3.35 GB/s) - written to stdout [3126/3126]
+2026-07-30 13:09:13 (3.64 GB/s) - written to stdout [3126/3126]
 
     deb [arch=amd64 signed-by=/etc/apt/keyrings/rocm.gpg] https://repo.radeon.com/amdgpu/31.40/ubuntu noble main
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
-Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
-Hit:2 http://de.archive.ubuntu.com/ubuntu noble InRelease
-Get:3 https://repo.radeon.com/amdgpu/31.40/ubuntu noble InRelease [3,185 B]
-Hit:4 http://de.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:1 http://de.archive.ubuntu.com/ubuntu noble InRelease
+Get:2 https://repo.radeon.com/amdgpu/31.40/ubuntu noble InRelease [3,185 B]
+Hit:3 http://de.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:4 http://security.ubuntu.com/ubuntu noble-security InRelease
 Hit:5 http://de.archive.ubuntu.com/ubuntu noble-backports InRelease
 Get:6 https://repo.radeon.com/amdgpu/31.40/ubuntu noble/main amd64 Packages [1,151 B]
-Fetched 4,336 B in 0s (13.3 kB/s)
+Fetched 4,336 B in 0s (12.7 kB/s)
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -914,7 +930,7 @@ Get:6 http://de.archive.ubuntu.com/ubuntu noble/main amd64 automake all 1:1.16.5
 Get:7 http://de.archive.ubuntu.com/ubuntu noble/universe amd64 pahole amd64 1.25-0ubuntu3 [277 kB]
 Get:8 http://de.archive.ubuntu.com/ubuntu noble/universe amd64 dwarves all 1.25-0ubuntu3 [2,186 B]
 Get:9 https://repo.radeon.com/amdgpu/31.40/ubuntu noble/main amd64 amdgpu-dkms all 1:6.19.14.31400000-2364437.24.04 [13.1 MB]
-Fetched 31.2 MB in 1s (28.8 MB/s)
+Fetched 31.2 MB in 1s (26.8 MB/s)
 Selecting previously unselected package dkms.
 (Reading database ... 
 (Reading database ... 5%
@@ -937,7 +953,7 @@ Selecting previously unselected package dkms.
 (Reading database ... 90%
 (Reading database ... 95%
 (Reading database ... 100%
-(Reading database ... 153287 files and directories currently installed.)
+(Reading database ... 153289 files and directories currently installed.)
 Preparing to unpack .../0-dkms_3.0.11-1ubuntu13_all.deb ...
 Unpacking dkms (3.0.11-1ubuntu13) ...
 Selecting previously unselected package m4.
@@ -1117,36 +1133,36 @@ Service restarts being deferred:
 No containers need to be restarted.
 
 User sessions running outdated binaries:
- ai1 @ session #4: bash[7506]
- ai1 @ user manager service: systemd[3455]
+ ai1 @ session #3: bash[3937]
+ ai1 @ user manager service: systemd[3694]
 
 No VM guests are running outdated hypervisor (qemu) binaries on this host.
 [1;32m	
  📦 Installing TheRock 7.14 complete Core SDK including runtimes, compilers, development tools, and dependencies for GFX ID 120x ...
 [1;35m
---2026-07-29 12:40:14--  https://repo.amd.com/rocm/packages-multi-arch/gpg/rocm.gpg
-Resolving repo.amd.com (repo.amd.com)... 2600:9000:26da:9c00:1e:e606:b200:93a1, 2600:9000:26da:1a00:1e:e606:b200:93a1, 2600:9000:26da:c800:1e:e606:b200:93a1, ...
-Connecting to repo.amd.com (repo.amd.com)|2600:9000:26da:9c00:1e:e606:b200:93a1|:443... connected.
+--2026-07-30 13:11:23--  https://repo.amd.com/rocm/packages-multi-arch/gpg/rocm.gpg
+Resolving repo.amd.com (repo.amd.com)... 2600:9000:26da:ba00:1e:e606:b200:93a1, 2600:9000:26da:8600:1e:e606:b200:93a1, 2600:9000:26da:a200:1e:e606:b200:93a1, ...
+Connecting to repo.amd.com (repo.amd.com)|2600:9000:26da:ba00:1e:e606:b200:93a1|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 3923 (3.8K) [binary/octet-stream]
 Saving to: ‘STDOUT’
 
-     0K ...                                                   100%  668M=0s
+     0K ...                                                   100%  591M=0s
 
-2026-07-29 12:40:14 (668 MB/s) - written to stdout [3923/3923]
+2026-07-30 13:11:23 (591 MB/s) - written to stdout [3923/3923]
 
     deb [arch=amd64 signed-by=/etc/apt/keyrings/amdrocm.gpg] https://repo.amd.com/rocm/packages-multi-arch/ubuntu2404 stable main
 
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
-Hit:1 https://repo.radeon.com/amdgpu/31.40/ubuntu noble InRelease
-Hit:2 http://de.archive.ubuntu.com/ubuntu noble InRelease
+Hit:1 http://de.archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 https://repo.radeon.com/amdgpu/31.40/ubuntu noble InRelease
 Hit:3 http://de.archive.ubuntu.com/ubuntu noble-updates InRelease
 Hit:4 http://de.archive.ubuntu.com/ubuntu noble-backports InRelease
 Hit:5 http://security.ubuntu.com/ubuntu noble-security InRelease
 Get:6 https://repo.amd.com/rocm/packages-multi-arch/ubuntu2404 stable InRelease [2,332 B]
 Get:7 https://repo.amd.com/rocm/packages-multi-arch/ubuntu2404 stable/main amd64 Packages [151 kB]
-Fetched 154 kB in 1s (135 kB/s)
+Fetched 154 kB in 1s (132 kB/s)
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -1394,14 +1410,14 @@ The following NEW packages will be installed:
 Need to get 6,451 MB of archives.
 After this operation, 19.7 GB of additional disk space will be used.
 Get:1 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libc6-i386 amd64 2.39-0ubuntu8.8 [2,787 kB]
-Get:2 https://repo.amd.com/rocm/packages-multi-arch/ubuntu2404 stable/main amd64 amdrocm-sysdeps7.14 amd64 7.14.0-3 [13.9 MB]
-Get:3 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libc6-dev-i386 amd64 2.39-0ubuntu8.8 [1,446 kB]
-Get:4 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libc6-x32 amd64 2.39-0ubuntu8.8 [2,919 kB]
-Get:5 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libc6-dev-x32 amd64 2.39-0ubuntu8.8 [1,637 kB]
-Get:6 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 lib32gcc-s1 amd64 14.2.0-4ubuntu2~24.04.1 [92.3 kB]
-Get:7 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libx32gcc-s1 amd64 14.2.0-4ubuntu2~24.04.1 [78.5 kB]
-Get:8 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 lib32gomp1 amd64 14.2.0-4ubuntu2~24.04.1 [141 kB]
-Get:9 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libx32gomp1 amd64 14.2.0-4ubuntu2~24.04.1 [144 kB]
+Get:2 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libc6-dev-i386 amd64 2.39-0ubuntu8.8 [1,446 kB]
+Get:3 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libc6-x32 amd64 2.39-0ubuntu8.8 [2,919 kB]
+Get:4 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libc6-dev-x32 amd64 2.39-0ubuntu8.8 [1,637 kB]
+Get:5 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 lib32gcc-s1 amd64 14.2.0-4ubuntu2~24.04.1 [92.3 kB]
+Get:6 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libx32gcc-s1 amd64 14.2.0-4ubuntu2~24.04.1 [78.5 kB]
+Get:7 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 lib32gomp1 amd64 14.2.0-4ubuntu2~24.04.1 [141 kB]
+Get:8 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libx32gomp1 amd64 14.2.0-4ubuntu2~24.04.1 [144 kB]
+Get:9 https://repo.amd.com/rocm/packages-multi-arch/ubuntu2404 stable/main amd64 amdrocm-sysdeps7.14 amd64 7.14.0-3 [13.9 MB]
 Get:10 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 lib32itm1 amd64 14.2.0-4ubuntu2~24.04.1 [29.5 kB]
 Get:11 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 libx32itm1 amd64 14.2.0-4ubuntu2~24.04.1 [29.8 kB]
 Get:12 http://de.archive.ubuntu.com/ubuntu noble-updates/main amd64 lib32atomic1 amd64 14.2.0-4ubuntu2~24.04.1 [8,594 B]
@@ -1699,7 +1715,7 @@ Get:303 https://repo.amd.com/rocm/packages-multi-arch/ubuntu2404 stable/main amd
 Get:304 https://repo.amd.com/rocm/packages-multi-arch/ubuntu2404 stable/main amd64 amdrocm-core-sdk7.14-gfx942 amd64 7.14.0-3 [1,256 B]
 Get:305 https://repo.amd.com/rocm/packages-multi-arch/ubuntu2404 stable/main amd64 amdrocm-core-sdk7.14-gfx950 amd64 7.14.0-3 [1,256 B]
 Get:306 https://repo.amd.com/rocm/packages-multi-arch/ubuntu2404 stable/main amd64 amdrocm-core-sdk7.14 amd64 7.14.0-3 [1,292 B]
-Fetched 6,451 MB in 6min 10s (17.4 MB/s)
+Fetched 6,451 MB in 6min 14s (17.3 MB/s)
 Selecting previously unselected package amdrocm-sysdeps7.14.
 (Reading database ... 
 (Reading database ... 5%
@@ -1722,7 +1738,7 @@ Selecting previously unselected package amdrocm-sysdeps7.14.
 (Reading database ... 90%
 (Reading database ... 95%
 (Reading database ... 100%
-(Reading database ... 158246 files and directories currently installed.)
+(Reading database ... 158248 files and directories currently installed.)
 Preparing to unpack .../000-amdrocm-sysdeps7.14_7.14.0-3_amd64.deb ...
 Unpacking amdrocm-sysdeps7.14 (7.14.0-3) ...
 Selecting previously unselected package amdrocm-amdsmi7.14.
@@ -2993,8 +3009,8 @@ Service restarts being deferred:
 No containers need to be restarted.
 
 User sessions running outdated binaries:
- ai1 @ session #4: bash[7506]
- ai1 @ user manager service: systemd[3455]
+ ai1 @ session #3: bash[3937]
+ ai1 @ user manager service: systemd[3694]
 
 No VM guests are running outdated hypervisor (qemu) binaries on this host.
 
@@ -3005,7 +3021,7 @@ No VM guests are running outdated hypervisor (qemu) binaries on this host.
 Defaulting to user installation because normal site-packages is not writeable
 Requirement already satisfied: pip in /usr/lib/python3/dist-packages (24.0)
 Collecting pip
-  Downloading pip-26.1.2-py3-none-any.whl.metadata (4.6 kB)
+  Downloading pip-26.2-py3-none-any.whl.metadata (4.6 kB)
 Requirement already satisfied: wheel in /usr/lib/python3/dist-packages (0.42.0)
 Collecting wheel
   Downloading wheel-0.47.0-py3-none-any.whl.metadata (2.3 kB)
@@ -3013,41 +3029,41 @@ Requirement already satisfied: setuptools in /usr/lib/python3/dist-packages (68.
 Collecting setuptools
   Downloading setuptools-83.0.0-py3-none-any.whl.metadata (6.6 kB)
 Requirement already satisfied: packaging>=24.0 in /usr/lib/python3/dist-packages (from wheel) (24.0)
-Downloading pip-26.1.2-py3-none-any.whl (1.8 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 24.8 MB/s eta 0:00:00
+Downloading pip-26.2-py3-none-any.whl (1.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 25.5 MB/s eta 0:00:00
 Downloading wheel-0.47.0-py3-none-any.whl (32 kB)
 Downloading setuptools-83.0.0-py3-none-any.whl (1.0 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 31.1 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 30.8 MB/s eta 0:00:00
 Installing collected packages: wheel, setuptools, pip
-Successfully installed pip-26.1.2 setuptools-83.0.0 wheel-0.47.0
+Successfully installed pip-26.2 setuptools-83.0.0 wheel-0.47.0
 Defaulting to user installation because normal site-packages is not writeable
 Looking in indexes: https://repo.amd.com/rocm/whl-multi-arch/
-Collecting torch==2.12.0+rocm7.14.0 (from torch[device-gfx1201]==2.12.0+rocm7.14.0)
+Collecting torch==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
   Downloading torch-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (203.8 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 203.8/203.8 MB 31.6 MB/s  0:00:06
-Collecting torchvision==0.27.0+rocm7.14.0 (from torchvision[device-gfx1201]==0.27.0+rocm7.14.0)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 203.8/203.8 MB 31.5 MB/s  0:00:06
+Collecting torchvision==0.27.0+rocm7.14.0 (from torchvision[device-all]==0.27.0+rocm7.14.0)
   Downloading torchvision-0.27.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (1.1 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 30.0 MB/s  0:00:00
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 29.8 MB/s  0:00:00
 Collecting torchaudio==2.11.0+rocm7.14.0
   Downloading torchaudio-2.11.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (1.5 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 30.4 MB/s  0:00:00
-Collecting filelock (from torch==2.12.0+rocm7.14.0->torch[device-gfx1201]==2.12.0+rocm7.14.0)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 29.8 MB/s  0:00:00
+Collecting filelock (from torch==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
   Downloading filelock-3.29.1-py3-none-any.whl (40 kB)
-Collecting typing-extensions>=4.10.0 (from torch==2.12.0+rocm7.14.0->torch[device-gfx1201]==2.12.0+rocm7.14.0)
+Collecting typing-extensions>=4.10.0 (from torch==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
   Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
-Collecting setuptools<82 (from torch==2.12.0+rocm7.14.0->torch[device-gfx1201]==2.12.0+rocm7.14.0)
+Collecting setuptools<82 (from torch==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
   Downloading setuptools-81.0.0-py3-none-any.whl (1.1 MB)
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 29.9 MB/s  0:00:00
-Collecting sympy>=1.13.3 (from torch==2.12.0+rocm7.14.0->torch[device-gfx1201]==2.12.0+rocm7.14.0)
+Collecting sympy>=1.13.3 (from torch==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
   Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 31.2 MB/s  0:00:00
-Collecting networkx>=2.5.1 (from torch==2.12.0+rocm7.14.0->torch[device-gfx1201]==2.12.0+rocm7.14.0)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 31.6 MB/s  0:00:00
+Collecting networkx>=2.5.1 (from torch==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
   Downloading networkx-3.6.1-py3-none-any.whl (2.1 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 31.0 MB/s  0:00:00
-Requirement already satisfied: jinja2 in /usr/lib/python3/dist-packages (from torch==2.12.0+rocm7.14.0->torch[device-gfx1201]==2.12.0+rocm7.14.0) (3.1.2)
-Collecting fsspec>=0.8.5 (from torch==2.12.0+rocm7.14.0->torch[device-gfx1201]==2.12.0+rocm7.14.0)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 30.8 MB/s  0:00:00
+Requirement already satisfied: jinja2 in /usr/lib/python3/dist-packages (from torch==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0) (3.1.2)
+Collecting fsspec>=0.8.5 (from torch==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
   Downloading fsspec-2026.4.0-py3-none-any.whl (203 kB)
-Collecting rocm==7.14.0 (from rocm[libraries]==7.14.0->torch==2.12.0+rocm7.14.0->torch[device-gfx1201]==2.12.0+rocm7.14.0)
+Collecting rocm==7.14.0 (from rocm[libraries]==7.14.0->torch==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
   Downloading rocm-7.14.0.tar.gz (24 kB)
   Installing build dependencies: started
   Installing build dependencies: finished with status 'done'
@@ -3055,50 +3071,237 @@ Collecting rocm==7.14.0 (from rocm[libraries]==7.14.0->torch==2.12.0+rocm7.14.0-
   Getting requirements to build wheel: finished with status 'done'
   Preparing metadata (pyproject.toml): started
   Preparing metadata (pyproject.toml): finished with status 'done'
-Collecting triton==3.7.1+git0263a6a6.rocm7.14.0 (from torch==2.12.0+rocm7.14.0->torch[device-gfx1201]==2.12.0+rocm7.14.0)
+Collecting triton==3.7.1+git0263a6a6.rocm7.14.0 (from torch==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
   Downloading triton-3.7.1%2Bgit0263a6a6.rocm7.14.0-cp312-cp312-linux_x86_64.whl (367.1 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 367.1/367.1 MB 30.5 MB/s  0:00:11
-Collecting rocm-bootstrap (from torch==2.12.0+rocm7.14.0->torch[device-gfx1201]==2.12.0+rocm7.14.0)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 367.1/367.1 MB 30.1 MB/s  0:00:11
+Collecting rocm-bootstrap (from torch==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
   Downloading rocm_bootstrap-0.1.0-py3-none-any.whl (27 kB)
-Collecting numpy (from torchvision==0.27.0+rocm7.14.0->torchvision[device-gfx1201]==0.27.0+rocm7.14.0)
+Collecting numpy (from torchvision==0.27.0+rocm7.14.0->torchvision[device-all]==0.27.0+rocm7.14.0)
   Downloading numpy-2.4.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.6 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.6/16.6 MB 31.5 MB/s  0:00:00
-Collecting pillow!=8.3.*,>=5.3.0 (from torchvision==0.27.0+rocm7.14.0->torchvision[device-gfx1201]==0.27.0+rocm7.14.0)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.6/16.6 MB 21.4 MB/s  0:00:01
+Collecting pillow!=8.3.*,>=5.3.0 (from torchvision==0.27.0+rocm7.14.0->torchvision[device-all]==0.27.0+rocm7.14.0)
   Downloading pillow-12.2.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 31.4 MB/s  0:00:00
-Collecting rocm-sdk-core==7.14.0 (from rocm==7.14.0->rocm[libraries]==7.14.0->torch==2.12.0+rocm7.14.0->torch[device-gfx1201]==2.12.0+rocm7.14.0)
+Collecting rocm-sdk-core==7.14.0 (from rocm==7.14.0->rocm[libraries]==7.14.0->torch==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
   Downloading rocm_sdk_core-7.14.0-py3-none-linux_x86_64.whl (414.6 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 414.6/414.6 MB 30.4 MB/s  0:00:13
-Collecting rocm-sdk-libraries==7.14.0 (from rocm[libraries]==7.14.0->torch==2.12.0+rocm7.14.0->torch[device-gfx1201]==2.12.0+rocm7.14.0)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 414.6/414.6 MB 30.0 MB/s  0:00:13
+Collecting rocm-sdk-libraries==7.14.0 (from rocm[libraries]==7.14.0->torch==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
   Downloading rocm_sdk_libraries-7.14.0-py3-none-linux_x86_64.whl (143.0 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 143.0/143.0 MB 31.7 MB/s  0:00:04
-Collecting amd-torch-device-gfx1201==2.12.0+rocm7.14.0 (from torch[device-gfx1201]==2.12.0+rocm7.14.0)
-  Downloading amd_torch_device_gfx1201-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (52.0 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.0/52.0 MB 31.7 MB/s  0:00:01
-Collecting amd-torch-device-gfx12-0==2.12.0+rocm7.14.0 (from torch[device-gfx1201]==2.12.0+rocm7.14.0)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 143.0/143.0 MB 30.1 MB/s  0:00:04
+Collecting amd-torch-device-gfx1010==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading amd_torch_device_gfx1010-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (44.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.8/44.8 MB 31.6 MB/s  0:00:01
+Collecting amd-torch-device-gfx1011==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading amd_torch_device_gfx1011-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (44.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.8/44.8 MB 31.6 MB/s  0:00:01
+Collecting amd-torch-device-gfx1012==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading amd_torch_device_gfx1012-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (44.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.8/44.8 MB 29.2 MB/s  0:00:01
+Collecting amd-torch-device-gfx1030==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading amd_torch_device_gfx1030-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (45.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.0/45.0 MB 31.4 MB/s  0:00:01
+Collecting amd-torch-device-gfx1031==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading amd_torch_device_gfx1031-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (45.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.1/45.1 MB 31.7 MB/s  0:00:01
+Collecting amd-torch-device-gfx1032==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading amd_torch_device_gfx1032-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (45.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.1/45.1 MB 31.6 MB/s  0:00:01
+Collecting amd-torch-device-gfx1033==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading amd_torch_device_gfx1033-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (45.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.1/45.1 MB 26.4 MB/s  0:00:01
+Collecting amd-torch-device-gfx1034==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading amd_torch_device_gfx1034-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (45.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.1/45.1 MB 31.7 MB/s  0:00:01
+Collecting amd-torch-device-gfx1035==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading amd_torch_device_gfx1035-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (45.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.1/45.1 MB 31.6 MB/s  0:00:01
+Collecting amd-torch-device-gfx1036==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading amd_torch_device_gfx1036-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (45.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.1/45.1 MB 26.1 MB/s  0:00:02
+Collecting amd-torch-device-gfx11==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading amd_torch_device_gfx11-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (475.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 475.6/475.6 MB 30.2 MB/s  0:00:15
+Collecting amd-torch-device-gfx1100==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading amd_torch_device_gfx1100-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (51.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 51.0/51.0 MB 27.5 MB/s  0:00:01
+Collecting amd-torch-device-gfx1101==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading amd_torch_device_gfx1101-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (50.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.8/50.8 MB 31.6 MB/s  0:00:01
+Collecting amd-torch-device-gfx1102==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading amd_torch_device_gfx1102-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (51.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 51.0/51.0 MB 31.6 MB/s  0:00:01
+Collecting amd-torch-device-gfx1103==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading amd_torch_device_gfx1103-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (50.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.9/50.9 MB 31.6 MB/s  0:00:01
+Collecting amd-torch-device-gfx1150==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading amd_torch_device_gfx1150-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (50.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.4/50.4 MB 31.6 MB/s  0:00:01
+Collecting amd-torch-device-gfx1151==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading amd_torch_device_gfx1151-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (50.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.4/50.4 MB 28.0 MB/s  0:00:01
+Collecting amd-torch-device-gfx1152==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading amd_torch_device_gfx1152-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (50.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.4/50.4 MB 26.9 MB/s  0:00:02
+Collecting amd-torch-device-gfx1153==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading amd_torch_device_gfx1153-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (50.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.4/50.4 MB 31.6 MB/s  0:00:01
+Collecting amd-torch-device-gfx12-0==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
   Downloading amd_torch_device_gfx12_0-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (113.5 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.5/113.5 MB 30.0 MB/s  0:00:03
-Collecting rocm-sdk-device-gfx1201==7.14.0 (from amd-torch-device-gfx1201==2.12.0+rocm7.14.0->torch[device-gfx1201]==2.12.0+rocm7.14.0)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.5/113.5 MB 31.7 MB/s  0:00:03
+Collecting amd-torch-device-gfx1200==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading amd_torch_device_gfx1200-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (51.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 51.8/51.8 MB 24.0 MB/s  0:00:02
+Collecting amd-torch-device-gfx1201==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading amd_torch_device_gfx1201-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (52.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.0/52.0 MB 27.5 MB/s  0:00:02
+Collecting amd-torch-device-gfx908==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading amd_torch_device_gfx908-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (44.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.2/44.2 MB 26.0 MB/s  0:00:01
+Collecting amd-torch-device-gfx90a==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading amd_torch_device_gfx90a-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (140.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 140.5/140.5 MB 31.3 MB/s  0:00:04
+Collecting amd-torch-device-gfx942==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading amd_torch_device_gfx942-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (162.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 162.1/162.1 MB 28.9 MB/s  0:00:05
+Collecting amd-torch-device-gfx950==2.12.0+rocm7.14.0 (from torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading amd_torch_device_gfx950-2.12.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (165.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 165.0/165.0 MB 29.7 MB/s  0:00:05
+Collecting rocm-sdk-device-gfx1010==7.14.0 (from amd-torch-device-gfx1010==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading rocm_sdk_device_gfx1010-7.14.0-py3-none-linux_x86_64.whl (63.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.6/63.6 MB 28.7 MB/s  0:00:02
+Collecting rocm-sdk-device-gfx1011==7.14.0 (from amd-torch-device-gfx1011==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading rocm_sdk_device_gfx1011-7.14.0-py3-none-linux_x86_64.whl (63.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.2/63.2 MB 31.6 MB/s  0:00:01
+Collecting rocm-sdk-device-gfx1012==7.14.0 (from amd-torch-device-gfx1012==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading rocm_sdk_device_gfx1012-7.14.0-py3-none-linux_x86_64.whl (63.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.2/63.2 MB 31.4 MB/s  0:00:02
+Collecting rocm-sdk-device-gfx1030==7.14.0 (from amd-torch-device-gfx1030==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading rocm_sdk_device_gfx1030-7.14.0-py3-none-linux_x86_64.whl (480.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 480.7/480.7 MB 30.0 MB/s  0:00:15
+Collecting rocm-sdk-device-gfx1031==7.14.0 (from amd-torch-device-gfx1031==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading rocm_sdk_device_gfx1031-7.14.0-py3-none-linux_x86_64.whl (68.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.1/68.1 MB 30.9 MB/s  0:00:02
+Collecting rocm-sdk-device-gfx1032==7.14.0 (from amd-torch-device-gfx1032==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading rocm_sdk_device_gfx1032-7.14.0-py3-none-linux_x86_64.whl (68.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.1/68.1 MB 31.6 MB/s  0:00:02
+Collecting rocm-sdk-device-gfx1033==7.14.0 (from amd-torch-device-gfx1033==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading rocm_sdk_device_gfx1033-7.14.0-py3-none-linux_x86_64.whl (68.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.1/68.1 MB 31.6 MB/s  0:00:02
+Collecting rocm-sdk-device-gfx1034==7.14.0 (from amd-torch-device-gfx1034==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading rocm_sdk_device_gfx1034-7.14.0-py3-none-linux_x86_64.whl (68.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.1/68.1 MB 31.7 MB/s  0:00:02
+Collecting rocm-sdk-device-gfx1035==7.14.0 (from amd-torch-device-gfx1035==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading rocm_sdk_device_gfx1035-7.14.0-py3-none-linux_x86_64.whl (68.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.1/68.1 MB 31.6 MB/s  0:00:02
+Collecting rocm-sdk-device-gfx1036==7.14.0 (from amd-torch-device-gfx1036==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading rocm_sdk_device_gfx1036-7.14.0-py3-none-linux_x86_64.whl (68.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.1/68.1 MB 31.6 MB/s  0:00:02
+Collecting rocm-sdk-device-gfx1100==7.14.0 (from amd-torch-device-gfx1100==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading rocm_sdk_device_gfx1100-7.14.0-py3-none-linux_x86_64.whl (214.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 214.9/214.9 MB 30.7 MB/s  0:00:06
+Collecting rocm-sdk-device-gfx1101==7.14.0 (from amd-torch-device-gfx1101==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading rocm_sdk_device_gfx1101-7.14.0-py3-none-linux_x86_64.whl (211.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 211.8/211.8 MB 31.7 MB/s  0:00:06
+Collecting rocm-sdk-device-gfx1102==7.14.0 (from amd-torch-device-gfx1102==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading rocm_sdk_device_gfx1102-7.14.0-py3-none-linux_x86_64.whl (209.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 209.7/209.7 MB 31.5 MB/s  0:00:06
+Collecting rocm-sdk-device-gfx1103==7.14.0 (from amd-torch-device-gfx1103==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading rocm_sdk_device_gfx1103-7.14.0-py3-none-linux_x86_64.whl (55.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.0/55.0 MB 31.7 MB/s  0:00:01
+Collecting rocm-sdk-device-gfx1150==7.14.0 (from amd-torch-device-gfx1150==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading rocm_sdk_device_gfx1150-7.14.0-py3-none-linux_x86_64.whl (148.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 148.4/148.4 MB 31.2 MB/s  0:00:04
+Collecting rocm-sdk-device-gfx1151==7.14.0 (from amd-torch-device-gfx1151==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading rocm_sdk_device_gfx1151-7.14.0-py3-none-linux_x86_64.whl (172.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 172.7/172.7 MB 30.6 MB/s  0:00:05
+Collecting rocm-sdk-device-gfx1152==7.14.0 (from amd-torch-device-gfx1152==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading rocm_sdk_device_gfx1152-7.14.0-py3-none-linux_x86_64.whl (148.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 148.2/148.2 MB 31.4 MB/s  0:00:04
+Collecting rocm-sdk-device-gfx1153==7.14.0 (from amd-torch-device-gfx1153==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading rocm_sdk_device_gfx1153-7.14.0-py3-none-linux_x86_64.whl (148.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 148.3/148.3 MB 29.9 MB/s  0:00:04
+Collecting rocm-sdk-device-gfx1200==7.14.0 (from amd-torch-device-gfx1200==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading rocm_sdk_device_gfx1200-7.14.0-py3-none-linux_x86_64.whl (402.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 402.3/402.3 MB 30.4 MB/s  0:00:12
+Collecting rocm-sdk-device-gfx1201==7.14.0 (from amd-torch-device-gfx1201==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
   Downloading rocm_sdk_device_gfx1201-7.14.0-py3-none-linux_x86_64.whl (337.8 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 337.8/337.8 MB 30.7 MB/s  0:00:10
-Collecting amd-torchvision-device-gfx1201==0.27.0+rocm7.14.0 (from torchvision[device-gfx1201]==0.27.0+rocm7.14.0)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 337.8/337.8 MB 30.5 MB/s  0:00:10
+Collecting rocm-sdk-device-gfx908==7.14.0 (from amd-torch-device-gfx908==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading rocm_sdk_device_gfx908-7.14.0-py3-none-linux_x86_64.whl (304.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 304.5/304.5 MB 31.2 MB/s  0:00:09
+Collecting rocm-sdk-device-gfx90a==7.14.0 (from amd-torch-device-gfx90a==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading rocm_sdk_device_gfx90a-7.14.0-py3-none-linux_x86_64.whl (472.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 472.6/472.6 MB 30.0 MB/s  0:00:15
+Collecting rocm-sdk-device-gfx942==7.14.0 (from amd-torch-device-gfx942==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading rocm_sdk_device_gfx942-7.14.0-py3-none-linux_x86_64.whl (1601.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 GB 27.1 MB/s  0:00:51
+Collecting rocm-sdk-device-gfx950==7.14.0 (from amd-torch-device-gfx950==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
+  Downloading rocm_sdk_device_gfx950-7.14.0-py3-none-linux_x86_64.whl (682.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 682.5/682.5 MB 30.1 MB/s  0:00:22
+Collecting amd-torchvision-device-gfx1010==0.27.0+rocm7.14.0 (from torchvision[device-all]==0.27.0+rocm7.14.0)
+  Downloading amd_torchvision_device_gfx1010-0.27.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (117 kB)
+Collecting amd-torchvision-device-gfx1011==0.27.0+rocm7.14.0 (from torchvision[device-all]==0.27.0+rocm7.14.0)
+  Downloading amd_torchvision_device_gfx1011-0.27.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (117 kB)
+Collecting amd-torchvision-device-gfx1012==0.27.0+rocm7.14.0 (from torchvision[device-all]==0.27.0+rocm7.14.0)
+  Downloading amd_torchvision_device_gfx1012-0.27.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (117 kB)
+Collecting amd-torchvision-device-gfx1030==0.27.0+rocm7.14.0 (from torchvision[device-all]==0.27.0+rocm7.14.0)
+  Downloading amd_torchvision_device_gfx1030-0.27.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (118 kB)
+Collecting amd-torchvision-device-gfx1031==0.27.0+rocm7.14.0 (from torchvision[device-all]==0.27.0+rocm7.14.0)
+  Downloading amd_torchvision_device_gfx1031-0.27.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (118 kB)
+Collecting amd-torchvision-device-gfx1032==0.27.0+rocm7.14.0 (from torchvision[device-all]==0.27.0+rocm7.14.0)
+  Downloading amd_torchvision_device_gfx1032-0.27.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (118 kB)
+Collecting amd-torchvision-device-gfx1033==0.27.0+rocm7.14.0 (from torchvision[device-all]==0.27.0+rocm7.14.0)
+  Downloading amd_torchvision_device_gfx1033-0.27.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (118 kB)
+Collecting amd-torchvision-device-gfx1034==0.27.0+rocm7.14.0 (from torchvision[device-all]==0.27.0+rocm7.14.0)
+  Downloading amd_torchvision_device_gfx1034-0.27.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (118 kB)
+Collecting amd-torchvision-device-gfx1035==0.27.0+rocm7.14.0 (from torchvision[device-all]==0.27.0+rocm7.14.0)
+  Downloading amd_torchvision_device_gfx1035-0.27.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (118 kB)
+Collecting amd-torchvision-device-gfx1036==0.27.0+rocm7.14.0 (from torchvision[device-all]==0.27.0+rocm7.14.0)
+  Downloading amd_torchvision_device_gfx1036-0.27.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (118 kB)
+Collecting amd-torchvision-device-gfx1100==0.27.0+rocm7.14.0 (from torchvision[device-all]==0.27.0+rocm7.14.0)
+  Downloading amd_torchvision_device_gfx1100-0.27.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (140 kB)
+Collecting amd-torchvision-device-gfx1101==0.27.0+rocm7.14.0 (from torchvision[device-all]==0.27.0+rocm7.14.0)
+  Downloading amd_torchvision_device_gfx1101-0.27.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (140 kB)
+Collecting amd-torchvision-device-gfx1102==0.27.0+rocm7.14.0 (from torchvision[device-all]==0.27.0+rocm7.14.0)
+  Downloading amd_torchvision_device_gfx1102-0.27.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (140 kB)
+Collecting amd-torchvision-device-gfx1103==0.27.0+rocm7.14.0 (from torchvision[device-all]==0.27.0+rocm7.14.0)
+  Downloading amd_torchvision_device_gfx1103-0.27.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (140 kB)
+Collecting amd-torchvision-device-gfx1150==0.27.0+rocm7.14.0 (from torchvision[device-all]==0.27.0+rocm7.14.0)
+  Downloading amd_torchvision_device_gfx1150-0.27.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (136 kB)
+Collecting amd-torchvision-device-gfx1151==0.27.0+rocm7.14.0 (from torchvision[device-all]==0.27.0+rocm7.14.0)
+  Downloading amd_torchvision_device_gfx1151-0.27.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (137 kB)
+Collecting amd-torchvision-device-gfx1152==0.27.0+rocm7.14.0 (from torchvision[device-all]==0.27.0+rocm7.14.0)
+  Downloading amd_torchvision_device_gfx1152-0.27.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (136 kB)
+Collecting amd-torchvision-device-gfx1153==0.27.0+rocm7.14.0 (from torchvision[device-all]==0.27.0+rocm7.14.0)
+  Downloading amd_torchvision_device_gfx1153-0.27.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (136 kB)
+Collecting amd-torchvision-device-gfx1200==0.27.0+rocm7.14.0 (from torchvision[device-all]==0.27.0+rocm7.14.0)
+  Downloading amd_torchvision_device_gfx1200-0.27.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (133 kB)
+Collecting amd-torchvision-device-gfx1201==0.27.0+rocm7.14.0 (from torchvision[device-all]==0.27.0+rocm7.14.0)
   Downloading amd_torchvision_device_gfx1201-0.27.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (133 kB)
-Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch==2.12.0+rocm7.14.0->torch[device-gfx1201]==2.12.0+rocm7.14.0)
+Collecting amd-torchvision-device-gfx908==0.27.0+rocm7.14.0 (from torchvision[device-all]==0.27.0+rocm7.14.0)
+  Downloading amd_torchvision_device_gfx908-0.27.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (116 kB)
+Collecting amd-torchvision-device-gfx90a==0.27.0+rocm7.14.0 (from torchvision[device-all]==0.27.0+rocm7.14.0)
+  Downloading amd_torchvision_device_gfx90a-0.27.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (116 kB)
+Collecting amd-torchvision-device-gfx942==0.27.0+rocm7.14.0 (from torchvision[device-all]==0.27.0+rocm7.14.0)
+  Downloading amd_torchvision_device_gfx942-0.27.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (110 kB)
+Collecting amd-torchvision-device-gfx950==0.27.0+rocm7.14.0 (from torchvision[device-all]==0.27.0+rocm7.14.0)
+  Downloading amd_torchvision_device_gfx950-0.27.0%2Brocm7.14.0-cp312-cp312-linux_x86_64.whl (110 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch==2.12.0+rocm7.14.0->torch[device-all]==2.12.0+rocm7.14.0)
   Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 26.4 MB/s  0:00:00
 Building wheels for collected packages: rocm
   Building wheel for rocm (pyproject.toml): started
   Building wheel for rocm (pyproject.toml): finished with status 'done'
-  Created wheel for rocm: filename=rocm-7.14.0-py3-none-any.whl size=28570 sha256=caa323e3b1dd13f73e3953baedfbd15b71552e5fcdd80ce633656e3e7bb36163
+  Created wheel for rocm: filename=rocm-7.14.0-py3-none-any.whl size=28570 sha256=51bd7c21301b75015c03394ef1f48c435471009b3b1fc78e3988ce1dbcb4a772
   Stored in directory: /home/ai1/.cache/pip/wheels/78/2f/c6/310dec83424466f3ce733993cb8913c095dca200f6f15b958e
 Successfully built rocm
-Installing collected packages: torchaudio, rocm-sdk-libraries, rocm-sdk-core, mpmath, typing-extensions, triton, sympy, setuptools, rocm-sdk-device-gfx1201, rocm-bootstrap, pillow, numpy, networkx, fsspec, filelock, rocm, torch, torchvision, amd-torchvision-device-gfx1201, amd-torch-device-gfx1201, amd-torch-device-gfx12-0
+Installing collected packages: torchaudio, rocm-sdk-libraries, rocm-sdk-core, mpmath, typing-extensions, triton, sympy, setuptools, rocm-sdk-device-gfx950, rocm-sdk-device-gfx942, rocm-sdk-device-gfx90a, rocm-sdk-device-gfx908, rocm-sdk-device-gfx1201, rocm-sdk-device-gfx1200, rocm-sdk-device-gfx1153, rocm-sdk-device-gfx1152, rocm-sdk-device-gfx1151, rocm-sdk-device-gfx1150, rocm-sdk-device-gfx1103, rocm-sdk-device-gfx1102, rocm-sdk-device-gfx1101, rocm-sdk-device-gfx1100, rocm-sdk-device-gfx1036, rocm-sdk-device-gfx1035, rocm-sdk-device-gfx1034, rocm-sdk-device-gfx1033, rocm-sdk-device-gfx1032, rocm-sdk-device-gfx1031, rocm-sdk-device-gfx1030, rocm-sdk-device-gfx1012, rocm-sdk-device-gfx1011, rocm-sdk-device-gfx1010, rocm-bootstrap, pillow, numpy, networkx, fsspec, filelock, rocm, torch, torchvision, amd-torchvision-device-gfx950, amd-torchvision-device-gfx942, amd-torchvision-device-gfx90a, amd-torchvision-device-gfx908, amd-torchvision-device-gfx1201, amd-torchvision-device-gfx1200, amd-torchvision-device-gfx1153, amd-torchvision-device-gfx1152, amd-torchvision-device-gfx1151, amd-torchvision-device-gfx1150, amd-torchvision-device-gfx1103, amd-torchvision-device-gfx1102, amd-torchvision-device-gfx1101, amd-torchvision-device-gfx1100, amd-torchvision-device-gfx1036, amd-torchvision-device-gfx1035, amd-torchvision-device-gfx1034, amd-torchvision-device-gfx1033, amd-torchvision-device-gfx1032, amd-torchvision-device-gfx1031, amd-torchvision-device-gfx1030, amd-torchvision-device-gfx1012, amd-torchvision-device-gfx1011, amd-torchvision-device-gfx1010, amd-torch-device-gfx950, amd-torch-device-gfx942, amd-torch-device-gfx90a, amd-torch-device-gfx908, amd-torch-device-gfx1201, amd-torch-device-gfx1200, amd-torch-device-gfx12-0, amd-torch-device-gfx1153, amd-torch-device-gfx1152, amd-torch-device-gfx1151, amd-torch-device-gfx1150, amd-torch-device-gfx1103, amd-torch-device-gfx1102, amd-torch-device-gfx1101, amd-torch-device-gfx1100, amd-torch-device-gfx11, amd-torch-device-gfx1036, amd-torch-device-gfx1035, amd-torch-device-gfx1034, amd-torch-device-gfx1033, amd-torch-device-gfx1032, amd-torch-device-gfx1031, amd-torch-device-gfx1030, amd-torch-device-gfx1012, amd-torch-device-gfx1011, amd-torch-device-gfx1010
   Attempting uninstall: setuptools
     Found existing installation: setuptools 83.0.0
     Uninstalling setuptools-83.0.0:
       Successfully uninstalled setuptools-83.0.0
 
-Successfully installed amd-torch-device-gfx12-0-2.12.0+rocm7.14.0 amd-torch-device-gfx1201-2.12.0+rocm7.14.0 amd-torchvision-device-gfx1201-0.27.0+rocm7.14.0 filelock-3.29.1 fsspec-2026.4.0 mpmath-1.3.0 networkx-3.6.1 numpy-2.4.4 pillow-12.2.0 rocm-7.14.0 rocm-bootstrap-0.1.0 rocm-sdk-core-7.14.0 rocm-sdk-device-gfx1201-7.14.0 rocm-sdk-libraries-7.14.0 setuptools-81.0.0 sympy-1.14.0 torch-2.12.0+rocm7.14.0 torchaudio-2.11.0+rocm7.14.0 torchvision-0.27.0+rocm7.14.0 triton-3.7.1+git0263a6a6.rocm7.14.0 typing-extensions-4.15.0
+Successfully installed amd-torch-device-gfx1010-2.12.0+rocm7.14.0 amd-torch-device-gfx1011-2.12.0+rocm7.14.0 amd-torch-device-gfx1012-2.12.0+rocm7.14.0 amd-torch-device-gfx1030-2.12.0+rocm7.14.0 amd-torch-device-gfx1031-2.12.0+rocm7.14.0 amd-torch-device-gfx1032-2.12.0+rocm7.14.0 amd-torch-device-gfx1033-2.12.0+rocm7.14.0 amd-torch-device-gfx1034-2.12.0+rocm7.14.0 amd-torch-device-gfx1035-2.12.0+rocm7.14.0 amd-torch-device-gfx1036-2.12.0+rocm7.14.0 amd-torch-device-gfx11-2.12.0+rocm7.14.0 amd-torch-device-gfx1100-2.12.0+rocm7.14.0 amd-torch-device-gfx1101-2.12.0+rocm7.14.0 amd-torch-device-gfx1102-2.12.0+rocm7.14.0 amd-torch-device-gfx1103-2.12.0+rocm7.14.0 amd-torch-device-gfx1150-2.12.0+rocm7.14.0 amd-torch-device-gfx1151-2.12.0+rocm7.14.0 amd-torch-device-gfx1152-2.12.0+rocm7.14.0 amd-torch-device-gfx1153-2.12.0+rocm7.14.0 amd-torch-device-gfx12-0-2.12.0+rocm7.14.0 amd-torch-device-gfx1200-2.12.0+rocm7.14.0 amd-torch-device-gfx1201-2.12.0+rocm7.14.0 amd-torch-device-gfx908-2.12.0+rocm7.14.0 amd-torch-device-gfx90a-2.12.0+rocm7.14.0 amd-torch-device-gfx942-2.12.0+rocm7.14.0 amd-torch-device-gfx950-2.12.0+rocm7.14.0 amd-torchvision-device-gfx1010-0.27.0+rocm7.14.0 amd-torchvision-device-gfx1011-0.27.0+rocm7.14.0 amd-torchvision-device-gfx1012-0.27.0+rocm7.14.0 amd-torchvision-device-gfx1030-0.27.0+rocm7.14.0 amd-torchvision-device-gfx1031-0.27.0+rocm7.14.0 amd-torchvision-device-gfx1032-0.27.0+rocm7.14.0 amd-torchvision-device-gfx1033-0.27.0+rocm7.14.0 amd-torchvision-device-gfx1034-0.27.0+rocm7.14.0 amd-torchvision-device-gfx1035-0.27.0+rocm7.14.0 amd-torchvision-device-gfx1036-0.27.0+rocm7.14.0 amd-torchvision-device-gfx1100-0.27.0+rocm7.14.0 amd-torchvision-device-gfx1101-0.27.0+rocm7.14.0 amd-torchvision-device-gfx1102-0.27.0+rocm7.14.0 amd-torchvision-device-gfx1103-0.27.0+rocm7.14.0 amd-torchvision-device-gfx1150-0.27.0+rocm7.14.0 amd-torchvision-device-gfx1151-0.27.0+rocm7.14.0 amd-torchvision-device-gfx1152-0.27.0+rocm7.14.0 amd-torchvision-device-gfx1153-0.27.0+rocm7.14.0 amd-torchvision-device-gfx1200-0.27.0+rocm7.14.0 amd-torchvision-device-gfx1201-0.27.0+rocm7.14.0 amd-torchvision-device-gfx908-0.27.0+rocm7.14.0 amd-torchvision-device-gfx90a-0.27.0+rocm7.14.0 amd-torchvision-device-gfx942-0.27.0+rocm7.14.0 amd-torchvision-device-gfx950-0.27.0+rocm7.14.0 filelock-3.29.1 fsspec-2026.4.0 mpmath-1.3.0 networkx-3.6.1 numpy-2.4.4 pillow-12.2.0 rocm-7.14.0 rocm-bootstrap-0.1.0 rocm-sdk-core-7.14.0 rocm-sdk-device-gfx1010-7.14.0 rocm-sdk-device-gfx1011-7.14.0 rocm-sdk-device-gfx1012-7.14.0 rocm-sdk-device-gfx1030-7.14.0 rocm-sdk-device-gfx1031-7.14.0 rocm-sdk-device-gfx1032-7.14.0 rocm-sdk-device-gfx1033-7.14.0 rocm-sdk-device-gfx1034-7.14.0 rocm-sdk-device-gfx1035-7.14.0 rocm-sdk-device-gfx1036-7.14.0 rocm-sdk-device-gfx1100-7.14.0 rocm-sdk-device-gfx1101-7.14.0 rocm-sdk-device-gfx1102-7.14.0 rocm-sdk-device-gfx1103-7.14.0 rocm-sdk-device-gfx1150-7.14.0 rocm-sdk-device-gfx1151-7.14.0 rocm-sdk-device-gfx1152-7.14.0 rocm-sdk-device-gfx1153-7.14.0 rocm-sdk-device-gfx1200-7.14.0 rocm-sdk-device-gfx1201-7.14.0 rocm-sdk-device-gfx908-7.14.0 rocm-sdk-device-gfx90a-7.14.0 rocm-sdk-device-gfx942-7.14.0 rocm-sdk-device-gfx950-7.14.0 rocm-sdk-libraries-7.14.0 setuptools-81.0.0 sympy-1.14.0 torch-2.12.0+rocm7.14.0 torchaudio-2.11.0+rocm7.14.0 torchvision-0.27.0+rocm7.14.0 triton-3.7.1+git0263a6a6.rocm7.14.0 typing-extensions-4.15.0
 Defaulting to user installation because normal site-packages is not writeable
 Collecting accelerate
   Downloading accelerate-1.14.0-py3-none-any.whl.metadata (19 kB)
@@ -3212,30 +3415,30 @@ Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/lib/python3/dist-
 Requirement already satisfied: mdurl~=0.1 in /usr/lib/python3/dist-packages (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers) (0.1.2)
 Downloading accelerate-1.14.0-py3-none-any.whl (389 kB)
 Downloading datasets-5.0.1-py3-none-any.whl (559 kB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 559.1/559.1 kB 28.2 MB/s  0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 559.1/559.1 kB 28.9 MB/s  0:00:00
 Downloading dill-0.4.1-py3-none-any.whl (120 kB)
 Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
 Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
 Downloading huggingface_hub-1.25.1-py3-none-any.whl (774 kB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 774.9/774.9 kB 30.4 MB/s  0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 774.9/774.9 kB 29.6 MB/s  0:00:00
 Downloading click-8.4.2-py3-none-any.whl (119 kB)
 Downloading hf_xet-1.5.2-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.4 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 31.1 MB/s  0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 31.6 MB/s  0:00:00
 Downloading multiprocess-0.70.19-py312-none-any.whl (150 kB)
 Downloading diffusers-0.39.0-py3-none-any.whl (5.6 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.6/5.6 MB 31.6 MB/s  0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.6/5.6 MB 31.8 MB/s  0:00:00
 Downloading joblib-1.5.3-py3-none-any.whl (309 kB)
 Downloading protobuf-7.35.1-cp310-abi3-manylinux2014_x86_64.whl (327 kB)
 Downloading sentencepiece-0.2.2-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (1.4 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 31.6 MB/s  0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 30.9 MB/s  0:00:00
 Downloading setuptools_scm-10.2.1-py3-none-any.whl (29 kB)
 Downloading vcs_versioning-2.2.3-py3-none-any.whl (108 kB)
 Downloading transformers-5.14.1-py3-none-any.whl (11.6 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.6/11.6 MB 31.8 MB/s  0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.6/11.6 MB 31.9 MB/s  0:00:00
 Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 31.6 MB/s  0:00:00
 Downloading aiohttp-3.14.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.8 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 31.0 MB/s  0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 31.5 MB/s  0:00:00
 Downloading multidict-6.7.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (256 kB)
 Downloading yarl-1.24.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (109 kB)
 Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
@@ -3247,7 +3450,7 @@ Downloading propcache-0.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_
 Downloading pyarrow-25.0.0-cp312-cp312-manylinux_2_28_x86_64.whl (50.1 MB)
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 MB 32.0 MB/s  0:00:01
 Downloading regex-2026.7.19-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (801 kB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 801.8/801.8 kB 30.1 MB/s  0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 801.8/801.8 kB 30.0 MB/s  0:00:00
 Downloading requests-2.34.2-py3-none-any.whl (73 kB)
 Downloading charset_normalizer-3.4.9-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (224 kB)
 Downloading safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (516 kB)
@@ -3256,7 +3459,7 @@ Downloading anyio-4.14.2-py3-none-any.whl (125 kB)
 Downloading importlib_metadata-9.0.0-py3-none-any.whl (27 kB)
 Downloading zipp-4.1.0-py3-none-any.whl (10 kB)
 Downloading pandas-3.0.5-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (11.0 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.0/11.0 MB 31.9 MB/s  0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.0/11.0 MB 32.0 MB/s  0:00:00
 Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
 Downloading typer-0.27.0-py3-none-any.whl (122 kB)
 Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
@@ -3269,9 +3472,9 @@ Successfully installed accelerate-1.14.0 aiohappyeyeballs-2.7.1 aiohttp-3.14.3 a
 Docker not found. Installing...
 
 Installing and configuring Docker (stable version) with required dependencies...
-Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:1 https://repo.radeon.com/amdgpu/31.40/ubuntu noble InRelease
 Hit:2 http://de.archive.ubuntu.com/ubuntu noble InRelease
-Hit:3 https://repo.radeon.com/amdgpu/31.40/ubuntu noble InRelease
+Hit:3 http://security.ubuntu.com/ubuntu noble-security InRelease
 Hit:4 http://de.archive.ubuntu.com/ubuntu noble-updates InRelease
 Hit:5 http://de.archive.ubuntu.com/ubuntu noble-backports InRelease
 Hit:6 https://repo.amd.com/rocm/packages-multi-arch/ubuntu2404 stable InRelease
@@ -3291,7 +3494,7 @@ The following NEW packages will be installed:
 Need to get 3,970 B of archives.
 After this operation, 36.9 kB of additional disk space will be used.
 Get:1 http://de.archive.ubuntu.com/ubuntu noble-updates/universe amd64 apt-transport-https all 2.8.3 [3,970 B]
-Fetched 3,970 B in 0s (64.8 kB/s)
+Fetched 3,970 B in 0s (66.1 kB/s)
 Selecting previously unselected package apt-transport-https.
 (Reading database ... 
 (Reading database ... 5%
@@ -3314,7 +3517,7 @@ Selecting previously unselected package apt-transport-https.
 (Reading database ... 90%
 (Reading database ... 95%
 (Reading database ... 100%
-(Reading database ... 195874 files and directories currently installed.)
+(Reading database ... 195876 files and directories currently installed.)
 Preparing to unpack .../apt-transport-https_2.8.3_all.deb ...
 Unpacking apt-transport-https (2.8.3) ...
 Setting up apt-transport-https (2.8.3) ...
@@ -3337,19 +3540,19 @@ Service restarts being deferred:
 No containers need to be restarted.
 
 User sessions running outdated binaries:
- ai1 @ session #4: bash[7506]
- ai1 @ user manager service: systemd[3455]
+ ai1 @ session #3: bash[3937]
+ ai1 @ user manager service: systemd[3694]
 
 No VM guests are running outdated hypervisor (qemu) binaries on this host.
-Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
-Hit:2 http://de.archive.ubuntu.com/ubuntu noble InRelease
-Get:3 https://download.docker.com/linux/ubuntu noble InRelease [48.5 kB]
-Hit:4 https://repo.radeon.com/amdgpu/31.40/ubuntu noble InRelease
-Hit:5 http://de.archive.ubuntu.com/ubuntu noble-updates InRelease
-Hit:6 http://de.archive.ubuntu.com/ubuntu noble-backports InRelease
-Get:7 https://download.docker.com/linux/ubuntu noble/stable amd64 Packages [61.6 kB]
-Hit:8 https://repo.amd.com/rocm/packages-multi-arch/ubuntu2404 stable InRelease
-Fetched 110 kB in 1s (216 kB/s)
+Hit:1 https://repo.radeon.com/amdgpu/31.40/ubuntu noble InRelease
+Get:2 https://download.docker.com/linux/ubuntu noble InRelease [48.5 kB]
+Hit:3 http://de.archive.ubuntu.com/ubuntu noble InRelease
+Hit:4 http://de.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:5 http://de.archive.ubuntu.com/ubuntu noble-backports InRelease
+Get:6 https://download.docker.com/linux/ubuntu noble/stable amd64 Packages [61.8 kB]
+Hit:7 https://repo.amd.com/rocm/packages-multi-arch/ubuntu2404 stable InRelease
+Hit:8 http://security.ubuntu.com/ubuntu noble-security InRelease
+Fetched 110 kB in 3s (32.9 kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -3368,10 +3571,10 @@ Get:1 https://download.docker.com/linux/ubuntu noble/stable amd64 containerd.io 
 Get:2 http://de.archive.ubuntu.com/ubuntu noble/universe amd64 pigz amd64 2.8-1 [65.6 kB]
 Get:3 https://download.docker.com/linux/ubuntu noble/stable amd64 docker-ce-cli amd64 5:29.6.2-1~ubuntu.24.04~noble [16.9 MB]
 Get:4 https://download.docker.com/linux/ubuntu noble/stable amd64 docker-ce amd64 5:29.6.2-1~ubuntu.24.04~noble [23.3 MB]
-Get:5 https://download.docker.com/linux/ubuntu noble/stable amd64 docker-buildx-plugin amd64 0.35.0-1~ubuntu.24.04~noble [17.2 MB]
+Get:5 https://download.docker.com/linux/ubuntu noble/stable amd64 docker-buildx-plugin amd64 0.36.0-1~ubuntu.24.04~noble [17.2 MB]
 Get:6 https://download.docker.com/linux/ubuntu noble/stable amd64 docker-ce-rootless-extras amd64 5:29.6.2-1~ubuntu.24.04~noble [10.2 MB]
 Get:7 https://download.docker.com/linux/ubuntu noble/stable amd64 docker-compose-plugin amd64 5.3.1-1~ubuntu.24.04~noble [8,100 kB]
-Fetched 99.3 MB in 3s (31.4 MB/s)
+Fetched 99.3 MB in 3s (31.2 MB/s)
 Selecting previously unselected package containerd.io.
 (Reading database ... 
 (Reading database ... 5%
@@ -3394,7 +3597,7 @@ Selecting previously unselected package containerd.io.
 (Reading database ... 90%
 (Reading database ... 95%
 (Reading database ... 100%
-(Reading database ... 195878 files and directories currently installed.)
+(Reading database ... 195880 files and directories currently installed.)
 Preparing to unpack .../0-containerd.io_2.2.6-1~ubuntu.24.04~noble_amd64.deb ...
 Unpacking containerd.io (2.2.6-1~ubuntu.24.04~noble) ...
 Selecting previously unselected package docker-ce-cli.
@@ -3407,15 +3610,15 @@ Selecting previously unselected package pigz.
 Preparing to unpack .../3-pigz_2.8-1_amd64.deb ...
 Unpacking pigz (2.8-1) ...
 Selecting previously unselected package docker-buildx-plugin.
-Preparing to unpack .../4-docker-buildx-plugin_0.35.0-1~ubuntu.24.04~noble_amd64.deb ...
-Unpacking docker-buildx-plugin (0.35.0-1~ubuntu.24.04~noble) ...
+Preparing to unpack .../4-docker-buildx-plugin_0.36.0-1~ubuntu.24.04~noble_amd64.deb ...
+Unpacking docker-buildx-plugin (0.36.0-1~ubuntu.24.04~noble) ...
 Selecting previously unselected package docker-ce-rootless-extras.
 Preparing to unpack .../5-docker-ce-rootless-extras_5%3a29.6.2-1~ubuntu.24.04~noble_amd64.deb ...
 Unpacking docker-ce-rootless-extras (5:29.6.2-1~ubuntu.24.04~noble) ...
 Selecting previously unselected package docker-compose-plugin.
 Preparing to unpack .../6-docker-compose-plugin_5.3.1-1~ubuntu.24.04~noble_amd64.deb ...
 Unpacking docker-compose-plugin (5.3.1-1~ubuntu.24.04~noble) ...
-Setting up docker-buildx-plugin (0.35.0-1~ubuntu.24.04~noble) ...
+Setting up docker-buildx-plugin (0.36.0-1~ubuntu.24.04~noble) ...
 Setting up containerd.io (2.2.6-1~ubuntu.24.04~noble) ...
 Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /usr/lib/systemd/system/containerd.service.
 Setting up docker-compose-plugin (5.3.1-1~ubuntu.24.04~noble) ...
@@ -3445,8 +3648,8 @@ Service restarts being deferred:
 No containers need to be restarted.
 
 User sessions running outdated binaries:
- ai1 @ session #4: bash[7506]
- ai1 @ user manager service: systemd[3455]
+ ai1 @ session #3: bash[3937]
+ ai1 @ user manager service: systemd[3694]
 
 No VM guests are running outdated hypervisor (qemu) binaries on this host.
 Docker version 29.6.2, build dfc4efb

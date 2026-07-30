@@ -159,17 +159,17 @@ If it is disabled, **P2P** will be deactivated.
 
 `TransferBench` is a diagnostic tool that measures **memory bandwidth performance** between:
 
-- Host (CPU) ↔ GPU(s)  
-- GPU ↔ GPU (if multiple GPUs are installed)  
-- GPU internal memory
+- ✅ Host (CPU) ↔ GPU(s)  
+- ✅ GPU ↔ GPU (if multiple GPUs are installed)  
+- ✅ GPU internal memory
 
 ### Features
 TransferBench supports the following features:
-- Multiple Executors: CPU threads, GPU compute kernels (GFX), GPU DMA engines (SDMA), and NIC RDMA.
-- Multi-input or multi-output (MIMO) transfers: Element-wise sum from multiple SRCs to multiple DSTs.
-- Multinode execution: Runs across distributed systems using MPI or sockets.
-- Flexible configuration: Configure benchmarks using config files or presets.
-- Flexible hardware: Runs HIP and CUDA programs on both AMD and NVIDIA hardware.
+- ✅ Multiple Executors: CPU threads, GPU compute kernels (GFX), GPU DMA engines (SDMA), and NIC RDMA.
+- ✅ Multi-input or multi-output (MIMO) transfers: Element-wise sum from multiple SRCs to multiple DSTs.
+- ✅ Multinode execution: Runs across distributed systems using MPI or sockets.
+- ✅ Flexible configuration: Configure benchmarks using config files or presets.
+- ✅ Flexible hardware: Runs HIP and CUDA programs on both AMD and NVIDIA hardware.
 
 ### How to install?
 1️⃣ Install prerequisites

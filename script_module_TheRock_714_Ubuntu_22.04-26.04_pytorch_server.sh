@@ -24,7 +24,7 @@ exec > >(tee -a "$LOGFILE") 2>&1
 #   - Ubuntu 26.04.x: 7.0.0-28
 #
 # Supported Hardware:
-#   - AMD CDNA1 | CDNA2 | CDNA3 | CDNA4 | RDNA3 | RDNA4 GPU Architectures | Strix APU Architecture
+#   - AMD CDNA1 | CDNA2 | CDNA3 | CDNA4 | RDNA3 | RDNA4 GPU Architectures | Strix and Gorgon APU Architecture
 #
 # SOFTWARE VERSIONS:
 # ---------------------------------------------------------------------------------------------------------------
@@ -292,7 +292,7 @@ EOF
     sudo apt update
     sudo apt install -y amdgpu-dkms
 
-    print '\n 📦 Installing TheRock 7.14 complete Core SDK including runtimes, compilers, development tools, and dependencies for GFX ID 120x ...\n'
+    print '\n 📦 Installing TheRock 7.14 complete Core SDK including runtimes, compilers, development tools, and dependencies...\n'
 
     # Download and install the AMD ROCm GPG key
     sudo mkdir --parents --mode=0755 /etc/apt/keyrings
@@ -431,7 +431,7 @@ EOF
     sudo apt update
     sudo apt install -y amdgpu-dkms
 
-    print '\n 📦 Installing TheRock 7.14 complete Core SDK including runtimes, compilers, development tools, and dependencies\n'
+    print '\n 📦 Installing TheRock 7.14 complete Core SDK including runtimes, compilers, development tools, and dependencies...\n'
 
     # Download and install the AMD ROCm GPG key
     sudo mkdir --parents --mode=0755 /etc/apt/keyrings

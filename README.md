@@ -16,7 +16,7 @@ At the platform layer, the script installs the AMD GPU kernel driver (`amdgpu-dk
 
 For the AI framework layer, the script installs PyTorch 2.12 Stable using TheRock 7.14 wheels from the official PyTorch ROCm nightly repository. This enables access to the latest HIP runtime capabilities, compiler optimizations, and kernel fusion features. The environment is complemented with widely used AI and data-processing libraries, including Transformers, Accelerate, Diffusers, Datasets, and SentencePiece, together with the required Python build tooling for immediate development, testing, benchmarking, and profiling of modern LLM, diffusion, and distributed workloads.
 
-The developer toolchain further includes essential C/C++ build utilities and low-level GPU development packages such as `cmake`, `libstdc++` development headers, `git`, `git-lfs`, `libmsgpack`, and `rocm-bandwidth-test` for PCIe and HBM bandwidth validation. Runtime observability and diagnostics are supported through utilities including `htop`, `ncdu`, `rocminfo`, and `amd-smi`.
+The developer toolchain further includes essential C/C++ build utilities and low-level GPU development packages such as `cmake`, `libstdc++` development headers, `git`, `git-lfs`, `libmsgpack`, and `TransferBench` for PCIe and HBM bandwidth validation. Runtime observability and diagnostics are supported through utilities including `htop`, `ncdu`, `rocminfo`, and `amd-smi`.
 
 To validate the installation, the deployment automatically generates a verification script that performs end-to-end GPU checks, including ROCm runtime detection, PyTorch HIP availability, GPU enumeration, and successful on-device tensor execution.
 

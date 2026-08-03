@@ -399,7 +399,6 @@ install_resolute() {
     # Install prerequisites
     sudo DEBIAN_FRONTEND=noninteractive apt update
     sudo DEBIAN_FRONTEND=noninteractive apt install -y \
-        linux-generic \
         python3-pip \
         python3-venv \
         python3-dev \

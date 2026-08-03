@@ -31,7 +31,7 @@ The entire setup process is fully unattended and optimized for both workstation 
 | **OS**            | Ubuntu 22.04.x (Jammy Jellyfish), Ubuntu 24.04.x (Noble Numbat), Ubuntu 26.04 (Resolute Raccoon) |
 | **Kernels** tested       | 5.15.0-186 (22.04.5) • 6.17.0-1028-oem (24.04.4) • 7.0.0-28 (26.04)                      |
 | **GPUs**          | AMD **RDNA4** • **RDNA3** • **CDNA4** • **CDNA3** • **CDNA2** • **CDNA1**           |
-| **APUs**        |                                     |
+| **APUs**        | AMD Ryzen™ AI 300 and 400 series                                    |
 | **TheRock/ROCm**          | 7.14                                                |
 | **PyTorch**       | torch 2.12.0+rocm7.14.0, torchvision 0.27.0+rocm7.14.0, torchaudio 2.11.0+rocm7.14.0       |       |
 

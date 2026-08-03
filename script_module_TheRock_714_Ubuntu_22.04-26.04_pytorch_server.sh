@@ -260,23 +260,29 @@ install_noble() {
     sudo usermod -aG sudo ${SUDO_USER:-$USER}
 
     # Install prerequisites
+    sudo DEBIAN_FRONTEND=noninteractive apt update
     sudo DEBIAN_FRONTEND=noninteractive apt install -y \
-        "linux-headers-$(uname -r)" \
-        "linux-modules-extra-$(uname -r)" \
         python3-pip \
+        python3-venv \
+        python3-dev \
         git \
         git-lfs \
         htop \
-        freeipmi-tools \
         ncdu \
         cmake \
+        ninja-build \
+        pkg-config \
+        pciutils \
+        hwloc \
+        freeipmi-tools \
         libmsgpack-dev \
-        libstdc++-13-dev \
+        libstdc++-12-dev \
         libatomic1 \
         libquadmath0 \
         libnuma1 \
         libnuma-dev \
-        numactl
+        numactl \
+        libssl-dev
 
     print '\n 📦 Installing AMD GPU (amdgpu-dkms) kernel driver verion 31.40.0 ...\n'
 

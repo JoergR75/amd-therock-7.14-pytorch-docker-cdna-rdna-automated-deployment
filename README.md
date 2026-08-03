@@ -145,13 +145,9 @@ Expected Output Example:
 |--------|--------|--------|
 | ![](https://github.com/user-attachments/assets/d7731106-ea40-4f93-9509-680c684973b8) | ![](https://github.com/user-attachments/assets/4a937246-22f3-4c05-b465-09e47fa4968c) | ![](https://github.com/user-attachments/assets/e61a2b73-ade5-4172-a907-d8c030574b24) |
 
-| Ryzen™ AI Max 390 24.04 | Ryzen AI PRO 5 440 24.04 |
+| Ryzen™ AI Max 390 24.04 | Ryzen™ AI 5 PRO 440 24.04 |
 |--------|--------|
 | ![](https://github.com/user-attachments/assets/be00f4c2-a21a-4e4e-bcf9-dbddea71683f) | ![]() |
-
-<img width="1204" height="872" alt="image" src="https://github.com/user-attachments/assets/be00f4c2-a21a-4e4e-bcf9-dbddea71683f" />
-
-
 
 With `amd-smi`, you can verify all available GPUs (in this case, 2x Radeon AI PRO R9700 GPUs).
 
